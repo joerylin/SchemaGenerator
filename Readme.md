@@ -30,4 +30,59 @@
     5. 如需要下拉選單顯示時有更完整名稱或說明，請在『App_Data』資料夾下〝AppData.json〞檔，
         開啟編輯並設定〝DatabaseTypes〞物件資料，若無此設定即顯示ddl Type名稱
 
+## 三、Source Reader json 設定檔
+    1.  一般資料設定
 
+ | 項目 | 資料型別 | 說明 | 備註 |
+| --------------------------- | -------------- |----------------------- | ---------------------------------- |
+| DataSourceType | String | 資料來源類型 | ex:SDM、TableSchema |
+| TableSummaryWorksheet | String | 資料表列表 worksheet name | ex:SDM-Summary |    
+| TableSchemaWorksheet | String | 資料表欄位 worksheet name | ex:SDM-Detail |
+
+    2.  資料表資訊設定
+![Table Setting](picture/SourceReader_json_config01.png)
+
+ | 項目 | 資料型別 | 說明 | 備註 |
+| --------------------------- | -------------- |----------------------- | ---------------------------------- |
+| TableConfiguration | Object | 資料表資料欄設定資料 | 下列IndexOf欄位若無設成null |
+| IndexOfStartRow | Integer | 資料起始列，由0開始 |  |
+| IndexOfSeq | Integer | 序號欄位索引值 |  |
+| IndexOfArea | Integer | 主要分類欄位索引值 |  |
+| IndexOfSubjectArea | Integer | 子分類欄位索引值 |  |
+| IndexOfDataBase | Integer | 資料庫欄位索引值 |  |
+| IndexOfSchema | Integer | 資料結構欄位索引值 |  |
+| IndexOfTableName | Integer | 資料表名稱欄位索引值 |  |
+| IndexOfTableComment | Integer | 資料表說明欄位索引值 |  |
+| IndexOfTableOriginalName | Integer | 資料表原始名稱欄位索引值 |  |
+| IndexOfTableDescription | Integer | 資料表其他描述欄位索引值 |  |
+| ExtensionData | Object | 其他擴充欄位資訊欄 |  |
+| Key | String | 擴充欄位鍵值 | 英文命名 |
+| Name | String | 名稱 |  |
+| IndexOfColumn | Integer | 擴充欄位索引值 |  |
+
+    3.  欄位資料設定
+![Column Setting](picture/SourceReader_json_config02.png)
+
+ | 項目 | 資料型別 | 說明 | 備註 |
+| --------------------------- | -------------- |----------------------- | ---------------------------------- |
+| SchemaConfiguration | Object | 資料表欄位欄設定資料 | 下列IndexOf欄位若無設成null |
+| IndexOfStartRow | Integer | 資料起始列，由0開始 |  |
+| IndexOfColumnSeq | Integer | 序號欄位索引值 |  |
+| IndexOfArea | Integer | 主要分類欄位索引值 |  |
+| IndexOfSubjectArea | Integer | 子分類欄位索引值 |  |
+| IndexOfDataBase | Integer | 資料庫欄位索引值 |  |
+| IndexOfSchema | Integer | 資料結構欄位索引值 |  |
+| IndexOfTableName | Integer | 資料表名稱欄位索引值 |  |
+| IndexOfColumnName | Integer | 資料欄位名稱欄位索引值 |  |
+| IndexOfDatatype01 | Integer | 資料型別欄位索引值-01 |  |
+| IndexOfDatatype02 | Integer | 資料型別欄位索引值-02 | 有些文件會將Data Type 分成2欄就用到-02 |
+| IndexOfColumnDescription | Integer | 資料欄描述欄位索引值 |  |
+| IndexOfPK | Integer | Primary Key欄位索引值 |  |
+| IndexOfFK | Integer | Foreigner Key欄位索引值 |  |
+| IndexOfNullable | Integer | 是否能允許Null Value欄位索引值 | Null 與 Not Null 為二擇一 |
+| IndexOfNotNull | Integer | 是否為Not Null 欄位索引值 |  |
+| IndexOfColumnOriginalName | Integer | 資料欄原始名稱欄位索引值 |  |
+| ExtensionData | Object | 其他擴充欄位資訊欄 |  |
+| Key | String | 擴充欄位鍵值 | 英文命名 |
+| Name | String | 名稱 |  |
+| IndexOfColumn | Integer | 擴充欄位索引值 |  |
