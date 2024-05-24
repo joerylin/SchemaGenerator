@@ -31,6 +31,9 @@
         開啟編輯並設定〝DatabaseTypes〞物件資料，若無此設定即顯示ddl Type名稱
 
 ## 三、Source Reader json 設定檔
+    Template路徑：
+        *.json檔：\TableSchemaGenerator\App_Data\SourceReader.SDM_Defalut.json
+        Excel 檔：\TableSchemaGenerator\Template\ Excel檔
     1.  一般資料設定
 
  | 項目 | 資料型別 | 說明 | 備註 |
