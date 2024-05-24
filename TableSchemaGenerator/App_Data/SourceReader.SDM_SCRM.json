@@ -1,0 +1,35 @@
+{
+    "DataSourceType": "SDM",
+    "TableSummaryWorksheet": "Summary",
+    "TableSchemaWorksheet": "SDM",
+    "TableConfiguration": {
+        "IndexOfStartRow": 1,
+        "IndexOfSeq": 0,
+        "IndexOfArea": 1,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": null,
+        "IndexOfSchema": null,
+        "IndexOfTableName": 2,
+        "IndexOfTableComment": 3,
+        "IndexOfTableOriginalName": null,
+        "IndexOfTableDescription": 4
+    },
+    "SchemaConfiguration": {
+        "IndexOfStartRow": 1,
+        "IndexOfColumnSeq":null,
+        "IndexOfArea": 1,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": 0,
+        "IndexOfSchema": null,
+        "IndexOfTableName": 2,
+        "IndexOfColumnName": 6,
+        "IndexOfDatatype01": 7,
+        "IndexOfDatatype02": null,
+        "IndexOfColumnDescription": 8,
+        "IndexOfPK": 3,
+        "IndexOfFK": 4,
+        "IndexOfNullable": null,
+        "IndexOfNotNull": 5,
+        "IndexOfColumnOriginalName": null
+    }
+}

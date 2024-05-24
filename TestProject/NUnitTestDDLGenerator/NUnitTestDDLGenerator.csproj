@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CommonDB.DataBase\CommonDB.DataBase.csproj" />
+    <ProjectReference Include="..\..\Common\CommonLibrary\CommonLibrary.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\DocumentReader.SDM\SourceReader.SDM.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.MSAzureSynapse\SchemaGenerator.MSAzureSynapse.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.MSAzureSynapse_ForSDI\SchemaGenerator.MSAzureSynapseForSDI.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.MSSQL\SchemaGenerator.MSSQL.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.MYSQL\SchemaGenerator.MYSQL.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SchemaGenerator.Oracle\SchemaGenerator.Oracle.csproj" />
+    <ProjectReference Include="..\..\Common\SchemaGenerator\SourceReader.TableSchema\SourceReader.TableSchema.csproj" />
+    <ProjectReference Include="..\..\Common\Security\Common.Security\Common.Security.csproj" />
+  </ItemGroup>
+
+</Project>

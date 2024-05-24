@@ -1,0 +1,35 @@
+{
+    "DataSourceType": "SDM",
+    "TableSummaryWorksheet": "Table總表",
+    "TableSchemaWorksheet": "Columns",
+    "TableConfiguration": {
+        "IndexOfStartRow": 3,
+        "IndexOfSeq": 0,
+        "IndexOfArea": 1,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": 2,
+        "IndexOfSchema": 2,
+        "IndexOfTableName": 5,
+        "IndexOfTableComment": 6,
+        "IndexOfTableOriginalName": 10,
+        "IndexOfTableDescription": 7
+    },
+    "SchemaConfiguration": {
+        "IndexOfStartRow": 2,
+        "IndexOfColumnSeq":null,
+        "IndexOfArea": null,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": null,
+        "IndexOfSchema": null,
+        "IndexOfTableName": 0,
+        "IndexOfColumnName": 1,
+        "IndexOfDatatype01": 2,
+        "IndexOfDatatype02": null,
+        "IndexOfColumnDescription": 3,
+        "IndexOfPK": 6,
+        "IndexOfFK": 7,
+        "IndexOfNullable": null,
+        "IndexOfNotNull": 8,
+        "IndexOfColumnOriginalName": null
+    }
+}

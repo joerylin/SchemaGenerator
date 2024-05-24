@@ -1,0 +1,35 @@
+{
+    "DataSourceType": "TableSchema",
+    "TableSummaryWorksheet": "MART_Table總表",
+    "TableSchemaWorksheet": "#TableName#",
+    "TableConfiguration": {
+        "IndexOfStartRow": 3,
+        "IndexOfSeq": 0,
+        "IndexOfArea": 1,
+        "IndexOfSubjectArea": 3,
+        "IndexOfDataBase": 2,
+        "IndexOfSchema": 2,
+        "IndexOfTableName": 4,
+        "IndexOfTableComment": 5,
+        "IndexOfTableOriginalName": 8,
+        "IndexOfTableDescription": 6
+    },
+    "SchemaConfiguration": {
+        "IndexOfStartRow": 4,
+        "IndexOfColumnSeq": null,
+        "IndexOfArea": null,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": null,
+        "IndexOfSchema": null,
+        "IndexOfTableName": null,
+        "IndexOfColumnName": 0,
+        "IndexOfDatatype01": 1,
+        "IndexOfDatatype02": null,
+        "IndexOfColumnDescription": 2,
+        "IndexOfPK": 3,
+        "IndexOfFK": null,
+        "IndexOfNullable": null,
+        "IndexOfNotNull": 5,
+        "IndexOfColumnOriginalName": 17
+    }
+}

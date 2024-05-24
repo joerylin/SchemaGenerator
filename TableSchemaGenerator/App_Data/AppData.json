@@ -1,0 +1,36 @@
+{
+    "SourceTypes": [
+        {
+            "Type": "SDM",
+            "Name": "Source Data Mapping(資料表獨立Worksheet)"
+        },
+        {
+            "Type": "TableSchema",
+            "Name": "Schema(資料表各自Worksheet)"
+        }
+    ],
+    "DatabaseTypes": [
+        {
+            "Type": "MSSQL",
+            "Name": "Microsoft SQL Server"
+        },
+        {
+            "Type": "MySQL",
+            "Name": "My SQL"
+        },
+        {
+            "Type": "Oracle",
+            "Name": "Oracle"
+        },
+        {
+            "Type": "Postgres",
+            "Name": "Postgres"
+        },
+        {
+            "Type": "Teradata",
+            "Name": "Teradata Database"
+        }
+
+    ],
+     "DefaultDestinatinalPath": "SQLString"
+}

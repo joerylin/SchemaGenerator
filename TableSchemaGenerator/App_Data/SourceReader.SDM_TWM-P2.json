@@ -1,0 +1,35 @@
+{
+    "DataSourceType": "SDM",
+    "TableSummaryWorksheet": "Table 列表",
+    "TableSchemaWorksheet": "Table-SDM",
+    "TableConfiguration": {
+        "IndexOfStartRow": 1,
+        "IndexOfSeq": null,
+        "IndexOfArea": 0,
+        "IndexOfSubjectArea": 1,
+        "IndexOfDataBase": 3,
+        "IndexOfSchema": 3,
+        "IndexOfTableName": 5,
+        "IndexOfTableComment": 6,
+        "IndexOfTableOriginalName": null,
+        "IndexOfTableDescription": 10
+    },
+    "SchemaConfiguration": {
+        "IndexOfStartRow": 2,
+        "IndexOfColumnSeq": 2,
+        "IndexOfArea": null,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": 0,
+        "IndexOfSchema": 0,
+        "IndexOfTableName": 1,
+        "IndexOfColumnName": 3,
+        "IndexOfDatatype01": 5,
+        "IndexOfDatatype02": null,
+        "IndexOfColumnDescription": 4,
+        "IndexOfPK": 7,
+        "IndexOfFK": null,
+        "IndexOfNullable": 6,
+        "IndexOfNotNull": null,
+        "IndexOfColumnOriginalName": null
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "DataSourceType": "SDM",
+    "TableSummaryWorksheet": "SDI_MAIN",
+    "TableSchemaWorksheet": "SDI_DETAIL",
+    "TableConfiguration": {
+        "IndexOfStartRow": 1,
+        "IndexOfSeq": null,
+        "IndexOfArea": 3,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": 1,
+        "IndexOfSchema": null,
+        "IndexOfTableName": 2,
+        "IndexOfTableComment": 5,
+        "IndexOfTableOriginalName": 6,
+        "IndexOfTableDescription": 9,
+        "ExtensionData": [
+            {
+                "Key": "TableType",
+                "Name": "Table Type (Set/MutilSet)",
+                "IndexOfColumn": 3
+            },
+            {
+                "Key": "TableIndex",
+                "Name": "Index Of Table Index",
+                "IndexOfColumn": 4
+            }
+        ]
+    },
+    "SchemaConfiguration": {
+        "IndexOfStartRow": 1,
+        "IndexOfColumnSeq": null,
+        "IndexOfArea": null,
+        "IndexOfSubjectArea": null,
+        "IndexOfDataBase": 0,
+        "IndexOfSchema": null,
+        "IndexOfTableName": 1,
+        "IndexOfColumnName": 2,
+        "IndexOfDatatype01": 3,
+        "IndexOfDatatype02": null,
+        "IndexOfColumnDescription": 6,
+        "IndexOfPK": null,
+        "IndexOfFK": null,
+        "IndexOfNullable": null,
+        "IndexOfNotNull": 8,
+        "IndexOfColumnOriginalName": null
+    }
+}
