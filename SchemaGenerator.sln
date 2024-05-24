@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{6E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SchemaGenerator", "SchemaGenerator", "{0EFE8A70-C334-489B-8C48-0181C37065B5}"
 	ProjectSection(SolutionItems) = preProject
-		Common\SchemaGenerator\Readme.md = Common\SchemaGenerator\Readme.md
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestDDLGenerator", "TestProject\NUnitTestDDLGenerator\NUnitTestDDLGenerator.csproj", "{195C3D25-AF7F-4FD7-982E-79A10FFDC375}"
