@@ -1,7 +1,7 @@
 # Table Schema Generator (Create Table DDL SQL 工具)
 ## 需求情境
 #### 一、因專案資料庫結構文件為Excel，以前習慣用Excel VAB寫自動產生 Create Table DDL SQL，因目前其他專案有不同Excel格式就要改一次VBA。因此寫一個共用的程式，透過設定檔來調整欄位
-* 工具下載：[tmpfile\TableSchemaGenerator_v3.0.zip](https://drive.google.com/drive/folders/19AGdzsSI24Sqqg_xNU_yWAR5p4IYc3FJ "tmpfile\TableSchemaGenerator_v3.0.zip")
+* 工具下載：[TableSchemaGenerator_v3.0.zip](https://drive.google.com/drive/folders/1QTSycXqxJT-SS54kifxGhRRGTAswm7HhJ)
 
 #### 二、目前支援的格式
 * 來源：目前支援2種不同Excel格式  
