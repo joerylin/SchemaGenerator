@@ -1,137 +1,138 @@
-# Table Schema Generator (Create Table DDL SQL ¤u¨ã)
-## »İ¨D±¡¹Ò
-#### ¤@¡B¦]±M®×¸ê®Æ®wµ²ºc¤å¥ó¬°Excel¡A¥H«e²ßºD¥ÎExcel VAB¼g¦Û°Ê²£¥Í Create Table DDL SQL¡A¦]¥Ø«e¨ä¥L±M®×¦³¤£¦PExcel®æ¦¡´N­n§ï¤@¦¸VBA¡C¦]¦¹¼g¤@­Ó¦@¥Îªºµ{¦¡¡A³z¹L³]©wÀÉ¨Ó½Õ¾ãÄæ¦ì
-* ¤u¨ã¤U¸ü¡G[TableSchemaGenerator_v3.0.zip](https://drive.google.com/file/d/1bKpnxDbZOReZDc8IYVdLwrFyzq47YdxH/view?usp=sharing)
+# Table Schema Generator (Create Table DDL SQL å·¥å…·)
+## éœ€æ±‚æƒ…å¢ƒ
+#### ä¸€ã€å› å°ˆæ¡ˆè³‡æ–™åº«çµæ§‹æ–‡ä»¶ç‚ºExcelï¼Œä»¥å‰ç¿’æ…£ç”¨Excel VABå¯«è‡ªå‹•ç”¢ç”Ÿ Create Table DDL SQLï¼Œå› ç›®å‰å…¶ä»–å°ˆæ¡ˆæœ‰ä¸åŒExcelæ ¼å¼å°±è¦æ”¹ä¸€æ¬¡VBAã€‚å› æ­¤å¯«ä¸€å€‹å…±ç”¨çš„ç¨‹å¼ï¼Œé€éè¨­å®šæª”ä¾†èª¿æ•´æ¬„ä½
+* å·¥å…·ä¸‹è¼‰ï¼š[TableSchemaGenerator_v3.0.zip](https://drive.google.com/file/d/1bKpnxDbZOReZDc8IYVdLwrFyzq47YdxH/view?usp=sharing)
 
-#### ¤G¡B¥Ø«e¤ä´©ªº®æ¦¡
-* ¨Ó·½¡G¥Ø«e¤ä´©2ºØ¤£¦PExcel®æ¦¡  
-    1. SDM¡GTable¦Cªí¤@­ÓWorksheet¡AColumn¤]¥ş³¡¦b¤@­Óworksheet¡A¦@ 2 ­ÓWorksheets¡F(¸ê®Æªí¿W¥ßWorksheet)
-    2. TableSchema¡GTable¦Cªí¤@­ÓWorksheet¡AColumn Schema¦U¦ÛTable ¦U¦Û¤@­Óworkshee¡A¦@ 1+ N(Column Schema) ­ÓWorksheets¡F(¸ê®Æªí¦U¦ÛWorksheet)
-* ¥Øªº¡G
-    1. MSSQL¡GMicrosoft SQL Server
-    2. MSAzureSynapse¡GMicrosoft Azure Synapse
+#### äºŒã€ç›®å‰æ”¯æ´çš„æ ¼å¼
+* ä¾†æºï¼šç›®å‰æ”¯æ´2ç¨®ä¸åŒExcelæ ¼å¼  
+    1. SDMï¼šTableåˆ—è¡¨ä¸€å€‹Worksheetï¼ŒColumnä¹Ÿå…¨éƒ¨åœ¨ä¸€å€‹worksheetï¼Œå…± 2 å€‹Worksheetsï¼›(è³‡æ–™è¡¨ç¨ç«‹Worksheet)
+    2. TableSchemaï¼šTableåˆ—è¡¨ä¸€å€‹Worksheetï¼ŒColumn Schema Table å„è‡ªä¸€å€‹worksheetï¼Œå…± 1+ N(Column Schema) å€‹Worksheetsï¼›(è³‡æ–™è¡¨å„è‡ªWorksheet)
+* ç›®çš„ï¼š
+    1. MSSQLï¼šMicrosoft SQL Server
+    2. MSAzureSynapseï¼šMicrosoft Azure Synapse
     3. Oracle
-    4. MYSQL¡GMy SQL
+    4. MYSQLï¼šMy SQL
 
 
-## ¬ÛÃö½d¥»¤Î³]©wÀÉ»¡©ú
-#### ¤@¡B½d¥»ÀÉ  
-Template¸ô®|¡G  
-* (1) ¹w³]*.jsonÀÉ¸ô®|¡G\TableSchemaGenerator\App_Data\*.jsonÀÉ  
-      i.  [SDM®æ¦¡Ãş«¬(¸ê®Æªí¿W¥ßWorksheet)](TableSchemaGenerator\App_Data\SourceReader.SDM_Defalut.json)  
-      ii. [Table Schema®æ¦¡Ãş«¬(¸ê®Æªí¦U¦ÛWorksheet)](TableSchemaGenerator\App_Data\SourceReader.TableSchema.json) 
-* (2) Excel ÀÉ¡G\TableSchemaGenerator\Template\ ExcelÀÉ  
-      i.  [SDM®æ¦¡Ãş«¬(¸ê®Æªí¿W¥ßWorksheet)](TableSchemaGenerator\Template\SDM_MIS.xlsx)  
-      ii. [Table Schema®æ¦¡Ãş«¬(¸ê®Æªí¦U¦ÛWorksheet)](TableSchemaGenerator\Template\TableSchema.xls)
+## ç›¸é—œç¯„æœ¬åŠè¨­å®šæª”èªªæ˜
+#### ä¸€ã€ç¯„æœ¬æª”  
+Templateè·¯å¾‘ï¼š  
+* (1) é è¨­*.jsonæª”è·¯å¾‘ï¼š\TableSchemaGenerator\App_Data\*.jsonæª”  
+      i.  [SDMæ ¼å¼é¡å‹(è³‡æ–™è¡¨ç¨ç«‹Worksheet)](TableSchemaGenerator\App_Data\SourceReader.SDM_Defalut.json)  
+      ii. [Table Schemaæ ¼å¼é¡å‹(è³‡æ–™è¡¨å„è‡ªWorksheet)](TableSchemaGenerator\App_Data\SourceReader.TableSchema.json) 
+* (2) Excel æª”ï¼š\TableSchemaGenerator\Template\ Excelæª”  
+      i.  [SDMæ ¼å¼é¡å‹(è³‡æ–™è¡¨ç¨ç«‹Worksheet)](TableSchemaGenerator\Template\SDM_MIS.xlsx)  
+      ii. [Table Schemaæ ¼å¼é¡å‹(è³‡æ–™è¡¨å„è‡ªWorksheet)](TableSchemaGenerator\Template\TableSchema.xls)
 
-#### ¤G¡BAppData.json ³]©wÀÉ
-1. ­Y¨Ï¥Î³]©wÀÉ¡A¤U©Ô¿ï³æ·|¦Û°Ê¹ïÀ³³]©wÀÉ
-2. ­YµL³]©w/¹ïÀ³¡A§YÅã¥Ü¤¸¥óddl Type¦WºÙ
+#### äºŒã€AppData.json è¨­å®šæª”
+1. è‹¥ä½¿ç”¨è¨­å®šæª”ï¼Œä¸‹æ‹‰é¸å–®æœƒè‡ªå‹•å°æ‡‰è¨­å®šæª”
+2. è‹¥ç„¡è¨­å®š/å°æ‡‰ï¼Œå³é¡¯ç¤ºå…ƒä»¶ddl Typeåç¨±
+3. è¨­å®šæª” index èµ·å§‹å€¼ç‚º0
 
 ![AppData.json](tmpfile/AppData_josn.png)
 
- | ¶µ¥Ø | ¸ê®Æ«¬§O | »¡©ú | ³Æµù |
+ | é …ç›® | è³‡æ–™å‹åˆ¥ | èªªæ˜ | å‚™è¨» |
 | ----------------------- | ------------------ |---------------------------- | ----------------------------- |
-| SourceType | object[] | ¸ê®Æ¨Ó·½Ãş«¬ | |
-| DatabaseTypes | object[] | ¸ê®Æ¥ØªºÃş«¬ | |
-|  | object[] | ¸ê®Æ¨Ó¶µ¥Øª«¥ó©w¸q | |
-| Type | string | ¸ê®Æ¨Ó¶µ¡B¥ØªºªºÃş«¬ | ex:SDM¡BTableSchema¡BMSSQL...etc¡C¥²¶·»P¤¸¥ó{typename}¬Û¦P |
-| Name | string | ¥Î¨Ó»¡©úªº¦WºÙ©Î´y­z |  |
+| SourceType | object[] | è³‡æ–™ä¾†æºé¡å‹ | |
+| DatabaseTypes | object[] | è³‡æ–™ç›®çš„é¡å‹ | |
+|  | object[] | è³‡æ–™ä¾†é …ç›®ç‰©ä»¶å®šç¾© | |
+| Type | string | è³‡æ–™ä¾†é …ã€ç›®çš„çš„é¡å‹ | ex:SDMã€TableSchemaã€MSSQL...etcã€‚å¿…é ˆèˆ‡å…ƒä»¶{typename}ç›¸åŒ |
+| Name | string | ç”¨ä¾†èªªæ˜çš„åç¨±æˆ–æè¿° |  |
 
-#### ¤T¡BSource Reader json ³]©wÀÉ
-    1. SourceRead*.josn¡G³]©w¸ê®Æ¨Ó·½®æ¦¡  
-        ³]©wÀÉ©R¦W³W«h¬°¡G¡©SourceReader.{TypeName}_{Name}.json¡ª
-        i.  {TypeName}¡GÃş«¬¥N½X ex: SDM¡BTableSchema      
-        ii. {Name}¡G¦Û©w¸q°Ï§Oªº¦WºÙ
+#### ä¸‰ã€Source Reader json è¨­å®šæª”
+    1. SourceRead*.josnï¼šè¨­å®šè³‡æ–™ä¾†æºæ ¼å¼  
+        è¨­å®šæª”å‘½åè¦å‰‡ç‚ºï¼šã€SourceReader.{TypeName}_{Name}.jsonã€
+        i.  {TypeName}ï¼šé¡å‹ä»£ç¢¼ ex: SDMã€TableSchema      
+        ii. {Name}ï¼šè‡ªå®šç¾©å€åˆ¥çš„åç¨±
     
-    2.  ¤@¯ë¸ê®Æ³]©w
+    2.  ä¸€èˆ¬è³‡æ–™è¨­å®š
 
- | ¶µ¥Ø | ¸ê®Æ«¬§O | »¡©ú | ³Æµù |
+ | é …ç›® | è³‡æ–™å‹åˆ¥ | èªªæ˜ | å‚™è¨» |
 | --------------------------- | -------------- |----------------------- | ---------------------------------- |
-| DataSourceType | String | ¸ê®Æ¨Ó·½Ãş«¬ | ex:SDM¡BTableSchema |
-| TableSummaryWorksheet | String | ¸ê®Æªí¦Cªí worksheet name | ex:SDM-Summary |    
-| TableSchemaWorksheet | String | ¸ê®ÆªíÄæ¦ì worksheet name | ex:SDM-Detail |
+| DataSourceType | String | è³‡æ–™ä¾†æºé¡å‹ | ex:SDMã€TableSchema |
+| TableSummaryWorksheet | String | è³‡æ–™è¡¨åˆ—è¡¨ worksheet name | ex:SDM-Summary |    
+| TableSchemaWorksheet | String | è³‡æ–™è¡¨æ¬„ä½ worksheet name | ex:SDM-Detail |
 
-    3.  ¸ê®Æªí¸ê°T³]©w
+    3.  è³‡æ–™è¡¨è³‡è¨Šè¨­å®š
 ![Table Setting](tmpfile/SourceReader_json_config01.png)
 
- | ¶µ¥Ø | ¸ê®Æ«¬§O | »¡©ú | ³Æµù |
+ | é …ç›® | è³‡æ–™å‹åˆ¥ | èªªæ˜ | å‚™è¨» |
 | --------------------------- | -------------- |----------------------- | ---------------------------------- |
-| TableConfiguration | Object | ¸ê®Æªí¸ê®ÆÄæ³]©w¸ê®Æ | ¤U¦CIndexOfÄæ¦ì­YµL³]¦¨null |
-| IndexOfStartRow | Integer | ¸ê®Æ°_©l¦C¡A¥Ñ0¶}©l |  |
-| IndexOfSeq | Integer | §Ç¸¹Äæ¦ì¯Á¤Ş­È |  |
-| IndexOfArea | Integer | ¥D­n¤ÀÃşÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfSubjectArea | Integer | ¤l¤ÀÃşÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfDataBase | Integer | ¸ê®Æ®wÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfSchema | Integer | ¸ê®Æµ²ºcÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfTableName | Integer | ¸ê®Æªí¦WºÙÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfTableComment | Integer | ¸ê®Æªí»¡©úÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfTableOriginalName | Integer | ¸ê®Æªí­ì©l¦WºÙÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfTableDescription | Integer | ¸ê®Æªí¨ä¥L´y­zÄæ¦ì¯Á¤Ş­È |  |
-| ExtensionData | Object | ¨ä¥LÂX¥RÄæ¦ì¸ê°TÄæ |  |
-| Key | String | ÂX¥RÄæ¦ìÁä­È | ­^¤å©R¦W |
-| Name | String | ¦WºÙ |  |
-| IndexOfColumn | Integer | ÂX¥RÄæ¦ì¯Á¤Ş­È |  |
+| TableConfiguration | Object | è³‡æ–™è¡¨è³‡æ–™æ¬„è¨­å®šè³‡æ–™ | ä¸‹åˆ—IndexOfæ¬„ä½è‹¥ç„¡è¨­æˆnull |
+| IndexOfStartRow | Integer | è³‡æ–™èµ·å§‹åˆ—ï¼Œç”±0é–‹å§‹ |  |
+| IndexOfSeq | Integer | åºè™Ÿæ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfArea | Integer | ä¸»è¦åˆ†é¡æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfSubjectArea | Integer | å­åˆ†é¡æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfDataBase | Integer | è³‡æ–™åº«æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfSchema | Integer | è³‡æ–™çµæ§‹æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfTableName | Integer | è³‡æ–™è¡¨åç¨±æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfTableComment | Integer | è³‡æ–™è¡¨èªªæ˜æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfTableOriginalName | Integer | è³‡æ–™è¡¨åŸå§‹åç¨±æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfTableDescription | Integer | è³‡æ–™è¡¨å…¶ä»–æè¿°æ¬„ä½ç´¢å¼•å€¼ |  |
+| ExtensionData | Object | å…¶ä»–æ“´å……æ¬„ä½è³‡è¨Šæ¬„ |  |
+| Key | String | æ“´å……æ¬„ä½éµå€¼ | è‹±æ–‡å‘½å |
+| Name | String | åç¨± |  |
+| IndexOfColumn | Integer | æ“´å……æ¬„ä½ç´¢å¼•å€¼ |  |
 
-    4.  Äæ¦ì¸ê®Æ³]©w
+    4.  æ¬„ä½è³‡æ–™è¨­å®š
 ![Column Setting](tmpfile/SourceReader_json_config02.png)
 
- | ¶µ¥Ø | ¸ê®Æ«¬§O | »¡©ú | ³Æµù |
+ | é …ç›® | è³‡æ–™å‹åˆ¥ | èªªæ˜ | å‚™è¨» |
 | --------------------------- | -------------- |----------------------- | ---------------------------------- |
-| SchemaConfiguration | Object | ¸ê®ÆªíÄæ¦ìÄæ³]©w¸ê®Æ | ¤U¦CIndexOfÄæ¦ì­YµL³]¦¨null |
-| IndexOfStartRow | Integer | ¸ê®Æ°_©l¦C¡A¥Ñ0¶}©l |  |
-| IndexOfColumnSeq | Integer | §Ç¸¹Äæ¦ì¯Á¤Ş­È |  |
-| IndexOfArea | Integer | ¥D­n¤ÀÃşÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfSubjectArea | Integer | ¤l¤ÀÃşÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfDataBase | Integer | ¸ê®Æ®wÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfSchema | Integer | ¸ê®Æµ²ºcÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfTableName | Integer | ¸ê®Æªí¦WºÙÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfColumnName | Integer | ¸ê®ÆÄæ¦ì¦WºÙÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfDatatype01 | Integer | ¸ê®Æ«¬§OÄæ¦ì¯Á¤Ş­È-01 |  |
-| IndexOfDatatype02 | Integer | ¸ê®Æ«¬§OÄæ¦ì¯Á¤Ş­È-02 | ¦³¨Ç¤å¥ó·|±NData Type ¤À¦¨2Äæ´N¥Î¨ì-02 |
-| IndexOfColumnDescription | Integer | ¸ê®ÆÄæ´y­zÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfPK | Integer | Primary KeyÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfFK | Integer | Foreigner KeyÄæ¦ì¯Á¤Ş­È |  |
-| IndexOfNullable | Integer | ¬O§_¯à¤¹³\Null ValueÄæ¦ì¯Á¤Ş­È | Null »P Not Null ¬°¤G¾Ü¤@ |
-| IndexOfNotNull | Integer | ¬O§_¬°Not Null Äæ¦ì¯Á¤Ş­È |  |
-| IndexOfColumnOriginalName | Integer | ¸ê®ÆÄæ­ì©l¦WºÙÄæ¦ì¯Á¤Ş­È |  |
-| ExtensionData | Object | ¨ä¥LÂX¥RÄæ¦ì¸ê°TÄæ |  |
-| Key | String | ÂX¥RÄæ¦ìÁä­È | ­^¤å©R¦W |
-| Name | String | ¦WºÙ |  |
-| IndexOfColumn | Integer | ÂX¥RÄæ¦ì¯Á¤Ş­È |  |
+| SchemaConfiguration | Object | è³‡æ–™è¡¨æ¬„ä½æ¬„è¨­å®šè³‡æ–™ | ä¸‹åˆ—IndexOfæ¬„ä½è‹¥ç„¡è¨­æˆnull |
+| IndexOfStartRow | Integer | è³‡æ–™èµ·å§‹åˆ—ï¼Œç”±0é–‹å§‹ |  |
+| IndexOfColumnSeq | Integer | åºè™Ÿæ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfArea | Integer | ä¸»è¦åˆ†é¡æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfSubjectArea | Integer | å­åˆ†é¡æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfDataBase | Integer | è³‡æ–™åº«æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfSchema | Integer | è³‡æ–™çµæ§‹æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfTableName | Integer | è³‡æ–™è¡¨åç¨±æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfColumnName | Integer | è³‡æ–™æ¬„ä½åç¨±æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfDatatype01 | Integer | è³‡æ–™å‹åˆ¥æ¬„ä½ç´¢å¼•å€¼-01 |  |
+| IndexOfDatatype02 | Integer | è³‡æ–™å‹åˆ¥æ¬„ä½ç´¢å¼•å€¼-02 | æœ‰äº›æ–‡ä»¶æœƒå°‡Data Type åˆ†æˆ2æ¬„å°±ç”¨åˆ°-02 |
+| IndexOfColumnDescription | Integer | è³‡æ–™æ¬„æè¿°æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfPK | Integer | Primary Keyæ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfFK | Integer | Foreigner Keyæ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfNullable | Integer | æ˜¯å¦èƒ½å…è¨±Null Valueæ¬„ä½ç´¢å¼•å€¼ | Null èˆ‡ Not Null ç‚ºäºŒæ“‡ä¸€ |
+| IndexOfNotNull | Integer | æ˜¯å¦ç‚ºNot Null æ¬„ä½ç´¢å¼•å€¼ |  |
+| IndexOfColumnOriginalName | Integer | è³‡æ–™æ¬„åŸå§‹åç¨±æ¬„ä½ç´¢å¼•å€¼ |  |
+| ExtensionData | Object | å…¶ä»–æ“´å……æ¬„ä½è³‡è¨Šæ¬„ |  |
+| Key | String | æ“´å……æ¬„ä½éµå€¼ | è‹±æ–‡å‘½å |
+| Name | String | åç¨± |  |
+| IndexOfColumn | Integer | æ“´å……æ¬„ä½ç´¢å¼•å€¼ |  |
 
 
 
 
-# DDL ²£¥Í¾¹ µ{¦¡¥\¯à ÂX¥R³W½d
-## ¤@¡B¨Ó·½¤å¥óÃş«¬
-    1. »İÂX¥R·sÃş«¬¥\¯à®É¡A«Ø¥ß·sÃş§O±M®×©R¦W³W«h¬°¡G¡©SourceReader.{TypeName}¡ª
-        i. {TypeName}¡GÃş«¬¥N½X ex: SDM¡BTableSchema
+# DDL ç”¢ç”Ÿå™¨ ç¨‹å¼åŠŸèƒ½ æ“´å……è¦ç¯„
+## ä¸€ã€ä¾†æºæ–‡ä»¶é¡å‹
+    1. éœ€æ“´å……æ–°é¡å‹åŠŸèƒ½æ™‚ï¼Œå»ºç«‹æ–°é¡åˆ¥å°ˆæ¡ˆå‘½åè¦å‰‡ç‚ºï¼šã€SourceReader.{TypeName}ã€
+        i. {TypeName}ï¼šé¡å‹ä»£ç¢¼ ex: SDMã€TableSchema
 
-    2. »İ°Ñ¦Ò¡ySchemaGenerator.BaseFactory¡z±M®×
-         i. «Ø¥ßÃş§O¥BÄ~©Ó¡ySourceReaderBase¡zÃş§O¡A¨Ã¹ê§@¨ä¤èªk
-        ii. Ãş§O¦WºÙ©R¦W³W½d¡©{TypeName}SourceReader¡ª
+    2. éœ€åƒè€ƒã€SchemaGenerator.BaseFactoryã€å°ˆæ¡ˆ
+         i. å»ºç«‹é¡åˆ¥ä¸”ç¹¼æ‰¿ã€SourceReaderBaseã€é¡åˆ¥ï¼Œä¸¦å¯¦ä½œå…¶æ–¹æ³•
+        ii. é¡åˆ¥åç¨±å‘½åè¦ç¯„ã€{TypeName}SourceReaderã€
 
-    3. ±M®×¤U«Ø¥ß¡yApp_Data¡z¸ê®Æ§¨¡A¨Ã«Ø¥ß¡©SourceReader.{TypeName}.json¡ª
-        i. {TypeName}¡GÃş«¬¥N½X ex: SDM¡BTableSchema
-        ii. *.jsonÀÉ®×Äİ©Ê³]©w¡G«Ø¸m°Ê§@=µL¡F½Æ»s¨ì¿é¥X¥Ø¿ı=¥Ã»·½Æ»s
-        iii. ps:¥t­Y¸ÓSDM®æ¦¡¡AÄæ¦ì¶¶§Ç¦³®t²§½Ğ¦Û¤v­×§ï *.jsonÀÉ¡A­Y¦³¤£¥Î¥i¦Û¤v³Æ¥÷¡Aµ{¦¡¥u·|Åª¨ú¤W­z©R¦W³W«hªº*.jsonÀÉ
-        iv. *.json³]©wÀÉ¸Ìªº index °_©l­È¥Ñ"0"¶}©l   
+    3. å°ˆæ¡ˆä¸‹å»ºç«‹ã€App_Dataã€è³‡æ–™å¤¾ï¼Œä¸¦å»ºç«‹ã€SourceReader.{TypeName}.jsonã€
+        i. {TypeName}ï¼šé¡å‹ä»£ç¢¼ ex: SDMã€TableSchema
+        ii. *.jsonæª”æ¡ˆå±¬æ€§è¨­å®šï¼šå»ºç½®å‹•ä½œ=ç„¡ï¼›è¤‡è£½åˆ°è¼¸å‡ºç›®éŒ„=æ°¸é è¤‡è£½
+        iii. ps:å¦è‹¥è©²SDMæ ¼å¼ï¼Œæ¬„ä½é †åºæœ‰å·®ç•°è«‹è‡ªå·±ä¿®æ”¹ *.jsonæª”ï¼Œè‹¥æœ‰ä¸ç”¨å¯è‡ªå·±å‚™ä»½ï¼Œç¨‹å¼åªæœƒè®€å–ä¸Šè¿°å‘½åè¦å‰‡çš„*.jsonæª”
+        iv. *.jsonè¨­å®šæª”è£¡çš„ index èµ·å§‹å€¼ç”±"0"é–‹å§‹   
 
-    4. ¶}µo§¹«á«Ø¸m«á±N*.dll<¥²­n>¡B*.pdb½Æ»s©ó¥D­nµ{¦¡±M®×¥Ø¿ı¤U¡yExtension¡z¸ê®Æ§¨¤U¡A¨Ñµ{¦¡¦Û°Ê§PÂ_¶}±ÒÂX¥R
+    4. é–‹ç™¼å®Œå¾Œå»ºç½®å¾Œå°‡*.dll<å¿…è¦>ã€*.pdbè¤‡è£½æ–¼ä¸»è¦ç¨‹å¼å°ˆæ¡ˆç›®éŒ„ä¸‹ã€Extensionã€è³‡æ–™å¤¾ä¸‹ï¼Œä¾›ç¨‹å¼è‡ªå‹•åˆ¤æ–·é–‹å•Ÿæ“´å……
 
-    5. ¦p»İ­n¤U©Ô¿ï³æÅã¥Ü®É¦³§ó§¹¾ã¦WºÙ©Î»¡©ú¡A½Ğ¦b¡yApp_Data¡z¸ê®Æ§¨¤U¡©AppData.json¡ªÀÉ¡A
-        ¶}±Ò½s¿è¨Ã³]©w¡©SourceTypes¡ªª«¥ó¸ê®Æ¡A­YµL¦¹³]©w§YÅã¥Üddl Type¦WºÙ
+    5. å¦‚éœ€è¦ä¸‹æ‹‰é¸å–®é¡¯ç¤ºæ™‚æœ‰æ›´å®Œæ•´åç¨±æˆ–èªªæ˜ï¼Œè«‹åœ¨ã€App_Dataã€è³‡æ–™å¤¾ä¸‹ã€AppData.jsonã€æª”ï¼Œ
+        é–‹å•Ÿç·¨è¼¯ä¸¦è¨­å®šã€SourceTypesã€ç‰©ä»¶è³‡æ–™ï¼Œè‹¥ç„¡æ­¤è¨­å®šå³é¡¯ç¤ºddl Typeåç¨±
             
-    6. ¸ê®Æ¨Ó·½ÀÉ®×¡A­YµL±q«eºİ¿ï¨ú¡Aex: Excel SDM file :SDM_MIS.xlsx¹w³]¶·©ñ°õ¦æµ{¦¡®Ú¥Ø¿ı¤Uªº¡yTemplate¡z¥Ø¿ı¤U¡A
+    6. è³‡æ–™ä¾†æºæª”æ¡ˆï¼Œè‹¥ç„¡å¾å‰ç«¯é¸å–ï¼Œex: Excel SDM file :SDM_MIS.xlsxé è¨­é ˆæ”¾åŸ·è¡Œç¨‹å¼æ ¹ç›®éŒ„ä¸‹çš„ã€Templateã€ç›®éŒ„ä¸‹ï¼Œ
 
-## ¤G¡B²£¥ÍDDL DBÃş«¬
-    1. »İÂX¥R·sÃş«¬¥\¯à®É¡A«Ø¥ß·sÃş§O±M®×©R¦W³W«h¬°¡G¡©SchemaGenerator.{TypeName}¡ª
-        i. {TypeName}¡GÃş«¬¥N½X ex: MSSQL¡BOracle¡BTeradata
-    2. »İ°Ñ¦Ò¡ySchemaGenerator.BaseFactory¡z±M®× 
-         i. «Ø¥ßÃş§O¥BÄ~©Ó¡ySchemaGeneratorBase¡zÃş§O¡A¨Ã¹ê§@¨ä¤èªk
-        ii. Ãş§O¦WºÙ©R¦W³W½d¡©{TypeName}SchemaGenerator¡ª
-    3. ¶}µo§¹«á«Ø¸m«á±N*.dll<¥²­n>¡B*.pdb½Æ»s©ó¥D­nµ{¦¡±M®×¥Ø¿ı¤U¡yExtension¡z¸ê®Æ§¨¤U¡A¨Ñµ{¦¡¦Û°Ê§PÂ_¶}±ÒÂX¥R
+## äºŒã€ç”¢ç”ŸDDL DBé¡å‹
+    1. éœ€æ“´å……æ–°é¡å‹åŠŸèƒ½æ™‚ï¼Œå»ºç«‹æ–°é¡åˆ¥å°ˆæ¡ˆå‘½åè¦å‰‡ç‚ºï¼šã€SchemaGenerator.{TypeName}ã€
+        i. {TypeName}ï¼šé¡å‹ä»£ç¢¼ ex: MSSQLã€Oracleã€Teradata
+    2. éœ€åƒè€ƒã€SchemaGenerator.BaseFactoryã€å°ˆæ¡ˆ 
+         i. å»ºç«‹é¡åˆ¥ä¸”ç¹¼æ‰¿ã€SchemaGeneratorBaseã€é¡åˆ¥ï¼Œä¸¦å¯¦ä½œå…¶æ–¹æ³•
+        ii. é¡åˆ¥åç¨±å‘½åè¦ç¯„ã€{TypeName}SchemaGeneratorã€
+    3. é–‹ç™¼å®Œå¾Œå»ºç½®å¾Œå°‡*.dll<å¿…è¦>ã€*.pdbè¤‡è£½æ–¼ä¸»è¦ç¨‹å¼å°ˆæ¡ˆç›®éŒ„ä¸‹ã€Extensionã€è³‡æ–™å¤¾ä¸‹ï¼Œä¾›ç¨‹å¼è‡ªå‹•åˆ¤æ–·é–‹å•Ÿæ“´å……
 
 
 
