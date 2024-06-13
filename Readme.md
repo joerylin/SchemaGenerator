@@ -27,7 +27,7 @@ Template路徑：
 #### 二、AppData.json 設定檔
 1. 若使用設定檔，下拉選單會自動對應設定檔
 2. 若無設定/對應，即顯示元件ddl Type名稱
-3. 設定檔 index 起始值為0
+
 
 ![AppData.json](tmpfile/AppData_josn.png)
 
@@ -43,7 +43,8 @@ Template路徑：
     1. SourceRead*.josn：設定資料來源格式  
         設定檔命名規則為：〝SourceReader.{TypeName}_{Name}.json〞
         i.  {TypeName}：類型代碼 ex: SDM、TableSchema      
-        ii. {Name}：自定義區別的名稱
+        ii. {Name}：自定義區別的名稱  
+        iii. 設定檔 index 起始值為0 
     
     2.  一般資料設定
 
