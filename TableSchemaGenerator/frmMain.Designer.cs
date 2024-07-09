@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             dataGV = new DataGridView();
             chkbox = new DataGridViewCheckBoxColumn();
             Area = new DataGridViewTextBoxColumn();
@@ -67,9 +68,9 @@
             label8 = new Label();
             label9 = new Label();
             cmbSchema = new ComboBox();
-            ( (System.ComponentModel.ISupportInitialize)dataGV ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGV).BeginInit();
             menuStrip1.SuspendLayout();
-            ( (System.ComponentModel.ISupportInitialize)errorProvider ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // dataGV
@@ -84,7 +85,7 @@
             dataGV.RowHeadersWidth = 51;
             dataGV.Size = new Size(1087, 400);
             dataGV.TabIndex = 6;
-            dataGV.CellPainting +=  dataGV_CellPainting ;
+            dataGV.CellPainting += dataGV_CellPainting;
             // 
             // chkbox
             // 
@@ -182,7 +183,7 @@
             cmbSourceType.Name = "cmbSourceType";
             cmbSourceType.Size = new Size(280, 23);
             cmbSourceType.TabIndex = 3;
-            cmbSourceType.SelectedIndexChanged +=  cmbSourceType_SelectedIndexChanged ;
+            cmbSourceType.SelectedIndexChanged += cmbSourceType_SelectedIndexChanged;
             // 
             // cmbDBType
             // 
@@ -194,7 +195,7 @@
             cmbDBType.Name = "cmbDBType";
             cmbDBType.Size = new Size(280, 23);
             cmbDBType.TabIndex = 4;
-            cmbDBType.SelectedIndexChanged +=  cmbDBType_SelectedIndexChanged ;
+            cmbDBType.SelectedIndexChanged += cmbDBType_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -220,7 +221,7 @@
             btnQuery.TabIndex = 8;
             btnQuery.Text = "查詢";
             btnQuery.UseVisualStyleBackColor = true;
-            btnQuery.Click +=  btnQuery_Click ;
+            btnQuery.Click += btnQuery_Click;
             // 
             // btnGenerateDDL
             // 
@@ -230,7 +231,7 @@
             btnGenerateDDL.TabIndex = 9;
             btnGenerateDDL.Text = "產生DDL";
             btnGenerateDDL.UseVisualStyleBackColor = true;
-            btnGenerateDDL.Click +=  btnGenerateDDL_Click ;
+            btnGenerateDDL.Click += btnGenerateDDL_Click;
             // 
             // menuStrip1
             // 
@@ -294,7 +295,7 @@
             btnOpenSrcFile.TabIndex = 13;
             btnOpenSrcFile.Text = "...";
             btnOpenSrcFile.UseVisualStyleBackColor = true;
-            btnOpenSrcFile.Click +=  btnOpenSrcFile_Click ;
+            btnOpenSrcFile.Click += btnOpenSrcFile_Click;
             // 
             // label5
             // 
@@ -326,7 +327,7 @@
             btnOpenDesFile.TabIndex = 14;
             btnOpenDesFile.Text = "...";
             btnOpenDesFile.UseVisualStyleBackColor = true;
-            btnOpenDesFile.Click +=  btnOpenDesFile_Click ;
+            btnOpenDesFile.Click += btnOpenDesFile_Click;
             // 
             // cmbSourceConfig
             // 
@@ -450,15 +451,16 @@
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "frmMain";
             Text = "Table Schema Generator";
-            Load +=  frmMain_Load ;
-            ( (System.ComponentModel.ISupportInitialize)dataGV ).EndInit();
+            Load += frmMain_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGV).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ( (System.ComponentModel.ISupportInitialize)errorProvider ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
