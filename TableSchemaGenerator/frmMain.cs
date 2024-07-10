@@ -76,7 +76,6 @@ namespace TableSchemaGenerator
                     this.setComboboxData(this.cmbSchema, this._tableSummaries.DistinctBy(x => x.Schema).Select(x => new DataItem { Type = x.Schema, Name = x.Schema }).ToList());
                 }
                 this.bindDataToDataGridView(this.filterTableSummary());
-
             }
             catch (NullReferenceException ex)
             {
@@ -98,7 +97,8 @@ namespace TableSchemaGenerator
             if (!this.valGeneratorControl())
                 return;
 
-            List<string> list = this._tableSummaries.FindAll(x => x.IsChecked).Select(x => x.TableName).ToList();
+            List<TableSummary> tables = this.filterTableSummary();
+            List<string> list = tables.FindAll(x => x.IsChecked).Select(x => x.TableName).ToList();
             if (!this.valCheckCnt(list.Count))
                 return;
 
@@ -106,7 +106,7 @@ namespace TableSchemaGenerator
             if (this._schemaGenerator == null)
                 this._schemaGenerator = new SchemaGeneratorFactory(this.cmbDBType.SelectedValue!.ToString()!).CreateSchemaGeneratorInstance();
 
-            this._schemaGenerator.SetData(this._tableSummaries.FindAll(x => x.IsChecked), this._sourceReader.GetTableSchema(list), this.chkMergeFile.Checked, this.chkIsAddDbOrOwner.Checked);
+            this._schemaGenerator.SetData(tables.FindAll(x => x.IsChecked), this._sourceReader.GetTableSchema(list), this.chkMergeFile.Checked, this.chkIsAddDbOrOwner.Checked);
 
             //產生DDL
             try
@@ -152,7 +152,7 @@ namespace TableSchemaGenerator
 
         private void cmbSourceType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this._sourceReader is not null && ( DataTrans.CString(this.cmbSourceType.SelectedValue) != DataTrans.CString(this._sourceReader._appConfiguration.DataSourceType) ))
+            if (this._sourceReader is not null && (DataTrans.CString(this.cmbSourceType.SelectedValue) != DataTrans.CString(this._sourceReader._appConfiguration.DataSourceType)))
                 this._sourceReader = null;
 
             if (DataTrans.CString(this.cmbSourceType.SelectedValue) != "")
@@ -161,7 +161,7 @@ namespace TableSchemaGenerator
 
         private void cmbDBType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this._schemaGenerator is not null && ( DataTrans.CString(this.cmbDBType.SelectedValue) != this._schemaGenerator.DBType ))
+            if (this._schemaGenerator is not null && (DataTrans.CString(this.cmbDBType.SelectedValue) != this._schemaGenerator.DBType))
             {
                 this._schemaGenerator = null;
             }
@@ -324,7 +324,7 @@ namespace TableSchemaGenerator
             this.dataGV.AutoGenerateColumns = false;
             this.dataGV.DataSource = tableSummaries;
             if (tableSummaries.Count == 0)
-                this.alertWarningMsg("目前查詢沒有資料！");
+                this.alertWarningMsg("目前查詢沒有資料！"); 
         }
 
         private List<TableSummary> filterTableSummary()
@@ -333,7 +333,7 @@ namespace TableSchemaGenerator
             DataTrans.CString(x.Area!).Contains(this.cmbArea.SelectedValue.ToString())
           && DataTrans.CString(x.DataBase!).Contains(this.cmbDataBase.SelectedValue.ToString())
           && DataTrans.CString(x.Schema!).Contains(this.cmbSchema.SelectedValue.ToString())
-          && ( DataTrans.CString(x.TableName).Contains(this.txtTblKeyword.Text)
+          && (DataTrans.CString(x.TableName).Contains(this.txtTblKeyword.Text)
                    || DataTrans.CString(x.TableComment).Contains(this.txtTblKeyword.Text)
                    || String.IsNullOrEmpty(this.txtTblKeyword.Text)
                  )
@@ -369,20 +369,18 @@ namespace TableSchemaGenerator
 
                 int nChkBoxWidth = 15;
                 int nChkBoxHeight = 15;
-                int offsetx = ( e.CellBounds.Width - nChkBoxWidth ) / 2;
-                int offsety = ( e.CellBounds.Height - nChkBoxHeight ) / 2;
+                int offsetx = (e.CellBounds.Width - nChkBoxWidth) / 2;
+                int offsety = (e.CellBounds.Height - nChkBoxHeight) / 2;
 
                 pt.X += offsetx;
                 pt.Y += offsety;
+                CheckBox chkAllBox = new CheckBox();
+                chkAllBox.Size = new Size(nChkBoxWidth, nChkBoxHeight);
+                chkAllBox.Location = pt;
+                chkAllBox.Checked = false;
+                chkAllBox.CheckedChanged += new EventHandler(dgvCheckBox_CheckedChanged);
 
-                CheckBox chkBox = new CheckBox();
-
-                chkBox.Size = new Size(nChkBoxWidth, nChkBoxHeight);
-                chkBox.Location = pt;
-                chkBox.Checked = false;
-                chkBox.CheckedChanged += new EventHandler(dgvCheckBox_CheckedChanged);
-
-                ( (DataGridView)sender ).Controls.Add(chkBox);
+                ((DataGridView)sender).Controls.Add(chkAllBox);
 
                 e.Handled = true;
 
@@ -392,7 +390,7 @@ namespace TableSchemaGenerator
         private void dgvCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow r in this.dataGV.Rows)
-                r.Cells[0].Value = ( (CheckBox)sender ).Checked;
+                r.Cells[0].Value = ((CheckBox)sender).Checked;
         }
         #endregion
 
