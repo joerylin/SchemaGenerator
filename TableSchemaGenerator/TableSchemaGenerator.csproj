@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>acysw-jhi25-001.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="acysw-jhi25-001.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
