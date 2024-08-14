@@ -28,7 +28,6 @@ namespace SchemaGenerator.BaseFactory
         /// </summary>
         /// <param name="searchTblName">選取取得的資料表集合</param>
         /// <returns>Table Schema資料</returns>
-
         public abstract List<TableSchema> GetTableSchema(List<string> searchTblName = null);
 
     }
