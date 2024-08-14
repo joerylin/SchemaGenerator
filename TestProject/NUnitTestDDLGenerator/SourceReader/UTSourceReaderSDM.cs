@@ -127,19 +127,21 @@ namespace TestProject1.SourceReader
             Assert.AreEqual(exRecordCnt, recordCnt);
         }
 
-        [TestCase("SDM", "SDM_MIS.xlsx", 3, "in_usr_id", "Insert User ID", "VARCHAR(20)", true)]
-        [TestCase("SDM", "SDM_MIS.xlsx", 5, "mod_usr_id", "Modify User ID", "VARCHAR(20)", true)]
-        [TestCase("SDM", "SDM_MIS.xlsx", 8, "bus_id", "Bussiness ID", "VARCHAR(20)", false)]
-        [TestCase("SDM", "SDM_MIS.xlsx", 11, "tel", "TEL", "VARCHAR(12)", true)]
-        public void GetTableSchema_GetWorkSheet_CheckData(string doctype, string fileFullPath, Int32 rowIndex, string expColName, string expColOriginalName, string expDataType, Boolean expNullable)
+        [TestCase("SDM", null, "SDM_MIS.xlsx", 3, "in_usr_id", "Insert User ID", "VARCHAR(20)", true)]
+        [TestCase("SDM", null, "SDM_MIS.xlsx", 5, "mod_usr_id", "Modify User ID", "VARCHAR(20)", true)]
+        [TestCase("SDM", null, "SDM_MIS.xlsx", 8, "bus_id", "Bussiness ID", "VARCHAR(20)", false)]
+        [TestCase("SDM", null, "SDM_MIS.xlsx", 11, "tel", "TEL", "VARCHAR(12)", true)]
+        [TestCase("SDM", "SourceReader.SDM_MIS-ALL.json", "SDM-MIS-ALL.xlsx", 220, "apprl_map_name", "Approval Map Name", "VARCHAR(100)", false)]
+        public void GetTableSchema_GetWorkSheet_CheckData(string doctype, string jsonPath, string fileFullPath, Int32 rowIndex, string expColName, string expColOriginalName, string expDataType, Boolean expNullable)
         {
             //Arrange:初始化        
             SourceReaderBase documentReader;
             TableSchema table;
             fileFullPath = $"{base.BaseTemplatePath}{fileFullPath}";
+            
 
             //Act: 執行方法、行為、操作並取得結果
-            documentReader = new SourceReaderFactory(doctype).CreateDocumentReaderInstance(fileFullPath);
+            documentReader = new SourceReaderFactory(doctype, jsonPath).CreateDocumentReaderInstance(fileFullPath);
             table = documentReader.GetTableSchema(new List<string>())[rowIndex];
 
             //Assert: 驗證
@@ -163,7 +165,7 @@ namespace TestProject1.SourceReader
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "mis_catg", "IndexOfTablePPIName", "MIS_CATG_PPI")]
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "business", "IndexOfTableDescription", null)]
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "business", "IndexOfTablePPIName", "BUSINESS_PPI")]
-        
+
         public void GetTableSummaries_檢查額外欄位資料(string doctype, string fileFullPath, string appConfigFile, string tblName, string key, string expValue)
         {
             //Arrange:初始化        
@@ -186,7 +188,8 @@ namespace TestProject1.SourceReader
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "mis_catg", "catg_cd", "ColumnExtion", ",catg_cd  VARCHAR(10) PRIMARY KEY NOT NULL")]
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "mis_catg", "catg_desc", "ColumnExtion", ",catg_desc  VARCHAR(50)")]
         [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "business", "bus_eng_name", "ColumnExtion", ",bus_eng_name  NVARCHAR(150)")]
-        public void GetTableSchema_檢查額外欄位資料(string doctype, string fileFullPath, string appConfigFile, string tblName, string colName,  string key, string expValue)
+        [TestCase("SDM", "SDM_MIS2.xlsx", "SourceReader.SDM_Defalut.json", "business", "bus_eng_name", "ColumnExtion", ",bus_eng_name  NVARCHAR(150)")]
+        public void GetTableSchema_檢查額外欄位資料(string doctype, string fileFullPath, string appConfigFile, string tblName, string colName, string key, string expValue)
         {
             //Arrange:初始化        
             SourceReaderBase documentReader;
@@ -196,7 +199,7 @@ namespace TestProject1.SourceReader
 
             //Act: 執行方法、行為、操作並取得結果
             documentReader = new SourceReaderFactory(doctype, appConfigFile).CreateDocumentReaderInstance(fileFullPath);
-            schema = documentReader.GetTableSchema().First(x => x.TableName == tblName && x.ColumnName==colName);
+            schema = documentReader.GetTableSchema().First(x => x.TableName == tblName && x.ColumnName == colName);
             if (schema.ExtensionData != null)
                 value = schema.ExtensionData.First(x => x.Key == key).Value;
             Console.WriteLine($"expect expValue={expValue}，acture Table Name={value}");
