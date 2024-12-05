@@ -135,6 +135,3 @@ Template路徑：
          i. 建立類別且繼承『SchemaGeneratorBase』類別，並實作其方法
         ii. 類別名稱命名規範〝{TypeName}SchemaGenerator〞
     3. 開發完後建置後將*.dll<必要>、*.pdb複製於主要程式專案目錄下『Extension』資料夾下，供程式自動判斷開啟擴充
-
-
-
