@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
     <ProjectReference Include="..\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
   </ItemGroup>
 
@@ -20,5 +19,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+    <ItemGroup>
+        <Reference Include="CommonLibrary">
+            <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+        </Reference>
+    </ItemGroup>
 </Project>

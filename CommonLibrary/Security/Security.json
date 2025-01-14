@@ -1,0 +1,10 @@
+{
+    "DESSettings": { //加密金鑰KEY(8個字元) ，初始化向量IV(8個字元)
+        "KEY": "!QAZ@WSX",
+        "IV": "1qazxsw2"
+    },
+    "AESSettings": { //加密金鑰KEY(32個字元) ，初始化向量IV(16個字元)
+        "KEY": "JLin!QAZ2wsx#EDC4rfv%TGB6yhn&UJM",
+        "IV": "JoeryLinJoeryLin"
+    }
+}

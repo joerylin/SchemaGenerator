@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
     <ProjectReference Include="..\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
   </ItemGroup>
-
+    <ItemGroup>
+        <Reference Include="CommonLibrary">
+            <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+        </Reference>
+    </ItemGroup>
 </Project>

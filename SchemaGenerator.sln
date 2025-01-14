@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{12488AEA-238C-48E9-83A0-6C8C9EACF1EE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{6ED8966A-EDE0-48E6-837D-42A48411B90E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SchemaGenerator", "SchemaGenerator", "{0EFE8A70-C334-489B-8C48-0181C37065B5}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
@@ -15,12 +11,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestDDLGenerator", "TestProject\NUnitTestDDLGenerator\NUnitTestDDLGenerator.csproj", "{195C3D25-AF7F-4FD7-982E-79A10FFDC375}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestProject", "TestProject", "{2C9478AC-9BC8-4152-82BE-8E047AD6A93A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Security", "..\Security\Common.Security\Common.Security.csproj", "{4B4FA43A-6822-4F05-9826-C9F57FB8947F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.DLL", "..\Common.DLL\Common.DLL.csproj", "{1BA1B434-BD2A-486B-B692-2B561A625F6D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "..\CommonLibrary\CommonLibrary.csproj", "{573D29A4-25B9-4F89-85E5-656A77F4C8C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaGenerator.BaseFactory", "SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj", "{3C5BD6E1-ECB4-4EAD-8E1B-3E24892343D4}"
 EndProject
@@ -40,6 +30,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaGenerator.MSAzureSyna
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaGenerator.MSAzureSynapseForSDI", "SchemaGenerator.MSAzureSynapse_ForSDI\SchemaGenerator.MSAzureSynapseForSDI.csproj", "{C0B5E20C-F889-4E77-A787-BA3F661E8868}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLibrary", "CommonLibrary", "{DCE00D43-4E82-4D9A-91DF-53A5F7B95153}"
+	ProjectSection(SolutionItems) = preProject
+		CommonLibrary\CommonLibrary.dll = CommonLibrary\CommonLibrary.dll
+		CommonLibrary\CommonLibrary.pdb = CommonLibrary\CommonLibrary.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{382AE0FF-9442-419C-ACEB-53106E6224C0}"
+	ProjectSection(SolutionItems) = preProject
+		CommonLibrary\Security\Common.Security.dll = CommonLibrary\Security\Common.Security.dll
+		CommonLibrary\Security\Common.Security.pdb = CommonLibrary\Security\Common.Security.pdb
+		CommonLibrary\Security\Security.json = CommonLibrary\Security\Security.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecurityTool_windows", "SecurityTool_windows", "{0BEE1E29-8D31-492C-9425-4B2FDD377611}"
+	ProjectSection(SolutionItems) = preProject
+		CommonLibrary\SecurityTool_windows\appsettings.json = CommonLibrary\SecurityTool_windows\appsettings.json
+		CommonLibrary\SecurityTool_windows\Common.SecurityTool.exe = CommonLibrary\SecurityTool_windows\Common.SecurityTool.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,18 +59,6 @@ Global
 		{195C3D25-AF7F-4FD7-982E-79A10FFDC375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195C3D25-AF7F-4FD7-982E-79A10FFDC375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195C3D25-AF7F-4FD7-982E-79A10FFDC375}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B4FA43A-6822-4F05-9826-C9F57FB8947F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B4FA43A-6822-4F05-9826-C9F57FB8947F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B4FA43A-6822-4F05-9826-C9F57FB8947F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B4FA43A-6822-4F05-9826-C9F57FB8947F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BA1B434-BD2A-486B-B692-2B561A625F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BA1B434-BD2A-486B-B692-2B561A625F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BA1B434-BD2A-486B-B692-2B561A625F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BA1B434-BD2A-486B-B692-2B561A625F6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{573D29A4-25B9-4F89-85E5-656A77F4C8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{573D29A4-25B9-4F89-85E5-656A77F4C8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{573D29A4-25B9-4F89-85E5-656A77F4C8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{573D29A4-25B9-4F89-85E5-656A77F4C8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C5BD6E1-ECB4-4EAD-8E1B-3E24892343D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C5BD6E1-ECB4-4EAD-8E1B-3E24892343D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C5BD6E1-ECB4-4EAD-8E1B-3E24892343D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -103,11 +100,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6ED8966A-EDE0-48E6-837D-42A48411B90E} = {12488AEA-238C-48E9-83A0-6C8C9EACF1EE}
 		{195C3D25-AF7F-4FD7-982E-79A10FFDC375} = {2C9478AC-9BC8-4152-82BE-8E047AD6A93A}
-		{4B4FA43A-6822-4F05-9826-C9F57FB8947F} = {6ED8966A-EDE0-48E6-837D-42A48411B90E}
-		{1BA1B434-BD2A-486B-B692-2B561A625F6D} = {12488AEA-238C-48E9-83A0-6C8C9EACF1EE}
-		{573D29A4-25B9-4F89-85E5-656A77F4C8C5} = {12488AEA-238C-48E9-83A0-6C8C9EACF1EE}
 		{3C5BD6E1-ECB4-4EAD-8E1B-3E24892343D4} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
 		{F72A8C51-5DBA-4923-86DE-8BF40B4F8301} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
 		{2CF1C42E-7FEA-45B4-A0BD-D0B5CF253B06} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
@@ -117,6 +110,8 @@ Global
 		{3361814D-C97B-4A04-A3EF-EAD2AB9AB6BA} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
 		{CB3A3AEC-2C35-4FF7-956E-29BDD106AC7D} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
 		{C0B5E20C-F889-4E77-A787-BA3F661E8868} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
+		{382AE0FF-9442-419C-ACEB-53106E6224C0} = {DCE00D43-4E82-4D9A-91DF-53A5F7B95153}
+		{0BEE1E29-8D31-492C-9425-4B2FDD377611} = {DCE00D43-4E82-4D9A-91DF-53A5F7B95153}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F48E7B66-EEEC-4CE1-BC85-FA876A91382C}

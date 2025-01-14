@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
+    <Reference Include="CommonLibrary">
+      <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
