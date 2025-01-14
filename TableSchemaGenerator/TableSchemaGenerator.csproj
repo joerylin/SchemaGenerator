@@ -13,11 +13,14 @@
     <Content Include="acysw-jhi25-001.ico" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
+  <ItemGroup>    
     <ProjectReference Include="..\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
   </ItemGroup>
-
+    <ItemGroup>
+        <Reference Include="CommonLibrary">
+            <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+        </Reference>
+    </ItemGroup>
   <ItemGroup>
     <None Update="App_Data\AppData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
