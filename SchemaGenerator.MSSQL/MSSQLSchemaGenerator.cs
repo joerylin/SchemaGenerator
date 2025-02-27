@@ -1,4 +1,5 @@
-﻿using SchemaGenerator.BaseFactory;
+﻿using NPOI.SS.UserModel;
+using SchemaGenerator.BaseFactory;
 using SchemaGenerator.BaseFactory.Models;
 using System.Text;
 
@@ -19,6 +20,7 @@ namespace SchemaGenerator.MSSQL
 
             //Process column 
             schemas = schemas.OrderBy(x => x.ColumnSeq).ToList();
+            schemas.ForEach(x => x.Schema = table.Schema);
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < schemas.Count; i++)
             {
@@ -56,7 +58,7 @@ EXEC sys.sp_addextendedproperty
     @name=N'TableDescription', 
     @value=N'{table.TableComment}',
     @level0type=N'SCHEMA',
-    @level0name=N'dbo', 
+    @level0name=N'{table.Schema}', 
     @level1type=N'TABLE',
     @level1name=N'{table.TableName}'
 GO";
@@ -78,7 +80,7 @@ EXEC sys.sp_addextendedproperty
     @name=N'MS_Description', 
     @value=N'{item.ColumnDescription}',
     @level0type=N'SCHEMA',
-    @level0name=N'dbo', 
+    @level0name=N'{item.Schema}', 
     @level1type=N'TABLE',
     @level1name=N'{item.TableName}',
     @level2type=N'COLUMN',
