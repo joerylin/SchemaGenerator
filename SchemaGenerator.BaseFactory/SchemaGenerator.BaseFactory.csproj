@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Reference Include="CommonLibrary">
-      <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+      <HintPath>..\..\Common.DLL\DLL\CommonLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

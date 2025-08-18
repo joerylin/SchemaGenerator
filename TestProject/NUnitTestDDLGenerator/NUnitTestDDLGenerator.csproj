@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonLibrary\CommonLibrary.csproj" />
     <ProjectReference Include="..\..\DocumentReader.SDM\SourceReader.SDM.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.MSAzureSynapse\SchemaGenerator.MSAzureSynapse.csproj" />
@@ -25,13 +26,8 @@
     <ProjectReference Include="..\..\SchemaGenerator.MSSQL\SchemaGenerator.MSSQL.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.MYSQL\SchemaGenerator.MYSQL.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.Oracle\SchemaGenerator.Oracle.csproj" />
+    <ProjectReference Include="..\..\SchemaGenerator.POCOModel\SchemaGenerator.POCOModel.csproj" />
     <ProjectReference Include="..\..\SourceReader.TableSchema\SourceReader.TableSchema.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CommonLibrary">
-      <HintPath>..\..\CommonLibrary\CommonLibrary.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

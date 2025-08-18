@@ -6,12 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>    
+  <ItemGroup>
     <ProjectReference Include="..\SchemaGenerator.BaseFactory\SchemaGenerator.BaseFactory.csproj" />
   </ItemGroup>
-    <ItemGroup>
-        <Reference Include="CommonLibrary">            
-            <HintPath>..\..\Common.DLL\DLL\CommonLibrary.dll</HintPath>
-        </Reference>
-    </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonLibrary">
+      <HintPath>..\..\Common.DLL\DLL\CommonLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

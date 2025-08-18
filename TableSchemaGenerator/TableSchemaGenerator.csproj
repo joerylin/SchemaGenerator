@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Template\POCOTemplate.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="acysw-jhi25-001.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Template\POCOTemplate.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>    
@@ -18,7 +28,7 @@
   </ItemGroup>
     <ItemGroup>
         <Reference Include="CommonLibrary">
-            <HintPath>..\CommonLibrary\CommonLibrary.dll</HintPath>
+            <HintPath>..\..\Common.DLL\DLL\CommonLibrary.dll</HintPath>
         </Reference>
     </ItemGroup>
   <ItemGroup>
@@ -68,6 +78,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Extension\SchemaGenerator.Oracle.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Extension\SchemaGenerator.POCOModel.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Extension\SourceReader.SDM.dll">

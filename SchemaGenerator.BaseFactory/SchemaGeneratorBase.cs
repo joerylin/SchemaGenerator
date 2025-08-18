@@ -1,4 +1,5 @@
-﻿using SchemaGenerator.BaseFactory.Models;
+﻿using NPOI.HPSF;
+using SchemaGenerator.BaseFactory.Models;
 using System.Text;
 
 namespace SchemaGenerator.BaseFactory
@@ -14,11 +15,11 @@ namespace SchemaGenerator.BaseFactory
 
         public SchemaGeneratorBase(string dBType)
         {
-            this._SQLTemplate = File.ReadAllText($@"{base._templatePath}SQLTemplate.sql");
+            this._SQLTemplate = GetTemplateScript("SQLTemplate.sql");
             this.DBType = dBType;
         }
 
-        public void GeneratorCreateTableDDL(string? path = null, string fileName = "CrtTableDDL.sql")
+        public virtual void GeneratorCreateTableDDL(string? path = null, string fileName = "CrtTableDDL.sql")
         {
             if (this.IsCombineFile)
                 this.GeneratorSingleFileCrtTableDDL(path, fileName);
@@ -26,7 +27,7 @@ namespace SchemaGenerator.BaseFactory
                 this.GeneratorMutilFileCrtTableDDL(path);
         }
 
-        public void SaveAs(string? path = null, string fileName = "CrtTableDDL.sql", string? sqlTemplate = null)
+        public virtual void SaveAs(string? path = null, string fileName = "CrtTableDDL.sql", string? sqlTemplate = null)
         {
             if (string.IsNullOrEmpty(path))
                 path = $@"{base._basePath}SQLScript\";
@@ -37,12 +38,12 @@ namespace SchemaGenerator.BaseFactory
             File.WriteAllText(path, sqlTemplate ?? this._SQLTemplate);
         }
 
-         /// <summary>
+        /// <summary>
         /// 設定要產生DDL的table summary 及 detail schema資料集合
         /// </summary>
         /// <param name="tables">產生DDL的table summary資料集合</param>
         /// <param name="schemas">產生DDL的detail schema資料集合</param>
-        public void SetData(List<TableSummary> tables, List<TableSchema> schemas, Boolean isCombineFile, Boolean isTblHasDbOwnerName )
+        public void SetData(List<TableSummary> tables, List<TableSchema> schemas, Boolean isCombineFile, Boolean isTblHasDbOwnerName)
         {
             this.IsCombineFile = isCombineFile;
             this.IsTblHasDbOwnerName = isTblHasDbOwnerName;
@@ -50,7 +51,9 @@ namespace SchemaGenerator.BaseFactory
             this._tableSchemas = schemas;
         }
 
-        protected void GeneratorMutilFileCrtTableDDL(string? path = null)
+        protected string GetTemplateScript(string filename = "SQLTemplate.sql") => File.ReadAllText($@"{base._templatePath}{filename}");
+
+        protected virtual void GeneratorMutilFileCrtTableDDL(string? path = null)
         {
             StringBuilder ddlBuilder = new StringBuilder();
             foreach (TableSummary item in this._tableSummaries)
@@ -63,7 +66,7 @@ namespace SchemaGenerator.BaseFactory
             }
         }
 
-        protected void GeneratorSingleFileCrtTableDDL(string? path = null, string? fileName = "CrtTableDDL.sql")
+        protected virtual void GeneratorSingleFileCrtTableDDL(string? path = null, string? fileName = "CrtTableDDL.sql")
         {
             StringBuilder ddlBuilder = new StringBuilder();
             foreach (TableSummary item in this._tableSummaries)
@@ -109,7 +112,7 @@ namespace SchemaGenerator.BaseFactory
 
         protected string getTableName(TableSummary table)
         {
-            if (this.IsTblHasDbOwnerName && ( !string.IsNullOrEmpty(table.DataBase) || !string.IsNullOrEmpty(table.Schema) ))
+            if (this.IsTblHasDbOwnerName && (!string.IsNullOrEmpty(table.DataBase) || !string.IsNullOrEmpty(table.Schema)))
                 return $"{table.Schema ?? table.DataBase}.{table.TableName}";
             else
                 return table.TableName;

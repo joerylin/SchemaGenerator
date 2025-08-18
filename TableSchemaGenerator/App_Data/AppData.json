@@ -29,6 +29,10 @@
         {
             "Type": "Teradata",
             "Name": "Teradata Database"
+        },
+        {
+            "Type": "POCOModel",
+            "Name": "POCO Model Class"
         }
 
     ],
