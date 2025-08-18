@@ -12,6 +12,7 @@
     2. MSAzureSynapse：Microsoft Azure Synapse
     3. Oracle
     4. MYSQL：My SQL
+    5. POCO Model Class
 
 
 ## 相關範本及設定檔說明
