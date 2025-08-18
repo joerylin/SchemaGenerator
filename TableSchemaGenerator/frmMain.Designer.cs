@@ -80,10 +80,11 @@
             dataGV.AllowUserToOrderColumns = true;
             dataGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGV.Columns.AddRange(new DataGridViewColumn[] { chkbox, Area, Database, Schema, TableName, TableComment });
-            dataGV.Location = new Point(19, 178);
+            dataGV.Location = new Point(49, 451);
+            dataGV.Margin = new Padding(8, 8, 8, 8);
             dataGV.Name = "dataGV";
             dataGV.RowHeadersWidth = 51;
-            dataGV.Size = new Size(1087, 400);
+            dataGV.Size = new Size(2795, 1013);
             dataGV.TabIndex = 6;
             dataGV.CellPainting += dataGV_CellPainting;
             // 
@@ -148,27 +149,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 29);
+            label1.Location = new Point(75, 73);
+            label1.Margin = new Padding(8, 0, 8, 0);
             label1.Name = "label1";
-            label1.Size = new Size(91, 15);
+            label1.Size = new Size(227, 38);
             label1.TabIndex = 0;
             label1.Text = "資料來源類型：";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(759, 32);
+            label2.Location = new Point(1952, 81);
+            label2.Margin = new Padding(8, 0, 8, 0);
             label2.Name = "label2";
-            label2.Size = new Size(79, 15);
+            label2.Size = new Size(197, 38);
             label2.TabIndex = 1;
             label2.Text = "資料庫類型：";
             // 
             // chkMergeFile
             // 
             chkMergeFile.AutoSize = true;
-            chkMergeFile.Location = new Point(825, 84);
+            chkMergeFile.Location = new Point(2121, 213);
+            chkMergeFile.Margin = new Padding(8, 8, 8, 8);
             chkMergeFile.Name = "chkMergeFile";
-            chkMergeFile.Size = new Size(122, 19);
+            chkMergeFile.Size = new Size(295, 42);
             chkMergeFile.TabIndex = 2;
             chkMergeFile.Text = "是否合併單一檔案";
             chkMergeFile.UseVisualStyleBackColor = true;
@@ -179,9 +183,10 @@
             cmbSourceType.DropDownWidth = 220;
             cmbSourceType.FlatStyle = FlatStyle.Popup;
             cmbSourceType.FormattingEnabled = true;
-            cmbSourceType.Location = new Point(118, 26);
+            cmbSourceType.Location = new Point(303, 66);
+            cmbSourceType.Margin = new Padding(8, 8, 8, 8);
             cmbSourceType.Name = "cmbSourceType";
-            cmbSourceType.Size = new Size(280, 23);
+            cmbSourceType.Size = new Size(714, 46);
             cmbSourceType.TabIndex = 3;
             cmbSourceType.SelectedIndexChanged += cmbSourceType_SelectedIndexChanged;
             // 
@@ -191,33 +196,37 @@
             cmbDBType.DropDownWidth = 200;
             cmbDBType.FlatStyle = FlatStyle.Flat;
             cmbDBType.FormattingEnabled = true;
-            cmbDBType.Location = new Point(836, 29);
+            cmbDBType.Location = new Point(2150, 73);
+            cmbDBType.Margin = new Padding(8, 8, 8, 8);
             cmbDBType.Name = "cmbDBType";
-            cmbDBType.Size = new Size(280, 23);
+            cmbDBType.Size = new Size(714, 46);
             cmbDBType.TabIndex = 4;
             cmbDBType.SelectedIndexChanged += cmbDBType_SelectedIndexChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(5, 114);
+            label3.Location = new Point(13, 289);
+            label3.Margin = new Padding(8, 0, 8, 0);
             label3.Name = "label3";
-            label3.Size = new Size(115, 15);
+            label3.Size = new Size(287, 38);
             label3.TabIndex = 5;
             label3.Text = "資料表關鍵字查詢：";
             // 
             // txtTblKeyword
             // 
-            txtTblKeyword.Location = new Point(118, 111);
+            txtTblKeyword.Location = new Point(303, 281);
+            txtTblKeyword.Margin = new Padding(8, 8, 8, 8);
             txtTblKeyword.Name = "txtTblKeyword";
-            txtTblKeyword.Size = new Size(614, 23);
+            txtTblKeyword.Size = new Size(1573, 46);
             txtTblKeyword.TabIndex = 7;
             // 
             // btnQuery
             // 
-            btnQuery.Location = new Point(825, 110);
+            btnQuery.Location = new Point(2121, 279);
+            btnQuery.Margin = new Padding(8, 8, 8, 8);
             btnQuery.Name = "btnQuery";
-            btnQuery.Size = new Size(75, 23);
+            btnQuery.Size = new Size(193, 58);
             btnQuery.TabIndex = 8;
             btnQuery.Text = "查詢";
             btnQuery.UseVisualStyleBackColor = true;
@@ -225,9 +234,10 @@
             // 
             // btnGenerateDDL
             // 
-            btnGenerateDDL.Location = new Point(906, 110);
+            btnGenerateDDL.Location = new Point(2330, 279);
+            btnGenerateDDL.Margin = new Padding(8, 8, 8, 8);
             btnGenerateDDL.Name = "btnGenerateDDL";
-            btnGenerateDDL.Size = new Size(75, 23);
+            btnGenerateDDL.Size = new Size(193, 58);
             btnGenerateDDL.TabIndex = 9;
             btnGenerateDDL.Text = "產生DDL";
             btnGenerateDDL.UseVisualStyleBackColor = true;
@@ -239,7 +249,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { 設定ToolStripMenuItem, 說明HToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1118, 24);
+            menuStrip1.Padding = new Padding(15, 5, 0, 5);
+            menuStrip1.Size = new Size(2875, 52);
             menuStrip1.TabIndex = 10;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -247,19 +258,19 @@
             // 
             設定ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 設定文件ToolStripMenuItem });
             設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            設定ToolStripMenuItem.Size = new Size(58, 20);
+            設定ToolStripMenuItem.Size = new Size(138, 42);
             設定ToolStripMenuItem.Text = "設定(&S)";
             // 
             // 設定文件ToolStripMenuItem
             // 
             設定文件ToolStripMenuItem.Name = "設定文件ToolStripMenuItem";
-            設定文件ToolStripMenuItem.Size = new Size(122, 22);
+            設定文件ToolStripMenuItem.Size = new Size(302, 54);
             設定文件ToolStripMenuItem.Text = "設定文件";
             // 
             // 說明HToolStripMenuItem
             // 
             說明HToolStripMenuItem.Name = "說明HToolStripMenuItem";
-            說明HToolStripMenuItem.Size = new Size(60, 20);
+            說明HToolStripMenuItem.Size = new Size(144, 42);
             說明HToolStripMenuItem.Text = "說明(&H)";
             // 
             // errorProvider
@@ -269,9 +280,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(29, 58);
+            label4.Location = new Point(75, 147);
+            label4.Margin = new Padding(8, 0, 8, 0);
             label4.Name = "label4";
-            label4.Size = new Size(91, 15);
+            label4.Size = new Size(227, 38);
             label4.TabIndex = 11;
             label4.Text = "資料來源路徑：";
             // 
@@ -281,17 +293,19 @@
             // 
             // txtFilePath
             // 
-            txtFilePath.Location = new Point(118, 55);
+            txtFilePath.Location = new Point(303, 139);
+            txtFilePath.Margin = new Padding(8, 8, 8, 8);
             txtFilePath.Name = "txtFilePath";
             txtFilePath.ReadOnly = true;
-            txtFilePath.Size = new Size(614, 23);
+            txtFilePath.Size = new Size(1573, 46);
             txtFilePath.TabIndex = 12;
             // 
             // btnOpenSrcFile
             // 
-            btnOpenSrcFile.Location = new Point(738, 55);
+            btnOpenSrcFile.Location = new Point(1898, 139);
+            btnOpenSrcFile.Margin = new Padding(8, 8, 8, 8);
             btnOpenSrcFile.Name = "btnOpenSrcFile";
-            btnOpenSrcFile.Size = new Size(29, 23);
+            btnOpenSrcFile.Size = new Size(75, 58);
             btnOpenSrcFile.TabIndex = 13;
             btnOpenSrcFile.Text = "...";
             btnOpenSrcFile.UseVisualStyleBackColor = true;
@@ -300,30 +314,33 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(29, 87);
+            label5.Location = new Point(75, 220);
+            label5.Margin = new Padding(8, 0, 8, 0);
             label5.Name = "label5";
-            label5.Size = new Size(91, 15);
+            label5.Size = new Size(227, 38);
             label5.TabIndex = 5;
             label5.Text = "預設儲存路徑：";
             // 
             // txtDesPath
             // 
-            txtDesPath.Location = new Point(118, 84);
+            txtDesPath.Location = new Point(303, 213);
+            txtDesPath.Margin = new Padding(8, 8, 8, 8);
             txtDesPath.Name = "txtDesPath";
             txtDesPath.ReadOnly = true;
-            txtDesPath.Size = new Size(614, 23);
+            txtDesPath.Size = new Size(1573, 46);
             txtDesPath.TabIndex = 7;
             // 
             // saveDesFileDialog
             // 
-            saveDesFileDialog.FileName = "crtTableDDL.sql";
-            saveDesFileDialog.Filter = "SQL檔|*.sql";
+            saveDesFileDialog.FileName = "crtTableDDL";
+            saveDesFileDialog.Filter = "SQL檔|*.sql|C#檔|*.cs|所有檔案|*.*";
             // 
             // btnOpenDesFile
             // 
-            btnOpenDesFile.Location = new Point(738, 84);
+            btnOpenDesFile.Location = new Point(1898, 213);
+            btnOpenDesFile.Margin = new Padding(8, 8, 8, 8);
             btnOpenDesFile.Name = "btnOpenDesFile";
-            btnOpenDesFile.Size = new Size(29, 23);
+            btnOpenDesFile.Size = new Size(75, 58);
             btnOpenDesFile.TabIndex = 14;
             btnOpenDesFile.Text = "...";
             btnOpenDesFile.UseVisualStyleBackColor = true;
@@ -335,26 +352,29 @@
             cmbSourceConfig.DropDownWidth = 200;
             cmbSourceConfig.FlatStyle = FlatStyle.Flat;
             cmbSourceConfig.FormattingEnabled = true;
-            cmbSourceConfig.Location = new Point(474, 26);
+            cmbSourceConfig.Location = new Point(1219, 66);
+            cmbSourceConfig.Margin = new Padding(8, 8, 8, 8);
             cmbSourceConfig.Name = "cmbSourceConfig";
-            cmbSourceConfig.Size = new Size(280, 23);
+            cmbSourceConfig.Size = new Size(714, 46);
             cmbSourceConfig.TabIndex = 16;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(400, 29);
+            label6.Location = new Point(1029, 73);
+            label6.Margin = new Padding(8, 0, 8, 0);
             label6.Name = "label6";
-            label6.Size = new Size(79, 15);
+            label6.Size = new Size(197, 38);
             label6.TabIndex = 15;
             label6.Text = "來源設定檔：";
             // 
             // chkIsAddDbOrOwner
             // 
             chkIsAddDbOrOwner.AutoSize = true;
-            chkIsAddDbOrOwner.Location = new Point(825, 60);
+            chkIsAddDbOrOwner.Location = new Point(2121, 152);
+            chkIsAddDbOrOwner.Margin = new Padding(8, 8, 8, 8);
             chkIsAddDbOrOwner.Name = "chkIsAddDbOrOwner";
-            chkIsAddDbOrOwner.Size = new Size(231, 19);
+            chkIsAddDbOrOwner.Size = new Size(566, 42);
             chkIsAddDbOrOwner.TabIndex = 17;
             chkIsAddDbOrOwner.Text = "是否在資料表名前加Db/Owner Name";
             chkIsAddDbOrOwner.UseVisualStyleBackColor = true;
@@ -365,17 +385,19 @@
             cmbArea.DropDownWidth = 220;
             cmbArea.FlatStyle = FlatStyle.Popup;
             cmbArea.FormattingEnabled = true;
-            cmbArea.Location = new Point(118, 140);
+            cmbArea.Location = new Point(303, 355);
+            cmbArea.Margin = new Padding(8, 8, 8, 8);
             cmbArea.Name = "cmbArea";
-            cmbArea.Size = new Size(200, 23);
+            cmbArea.Size = new Size(508, 46);
             cmbArea.TabIndex = 19;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(35, 143);
+            label7.Location = new Point(90, 362);
+            label7.Margin = new Padding(8, 0, 8, 0);
             label7.Name = "label7";
-            label7.Size = new Size(77, 15);
+            label7.Size = new Size(192, 38);
             label7.TabIndex = 18;
             label7.Text = "Area(類別)：";
             // 
@@ -385,26 +407,29 @@
             cmbDataBase.DropDownWidth = 220;
             cmbDataBase.FlatStyle = FlatStyle.Popup;
             cmbDataBase.FormattingEnabled = true;
-            cmbDataBase.Location = new Point(400, 140);
+            cmbDataBase.Location = new Point(1029, 355);
+            cmbDataBase.Margin = new Padding(8, 8, 8, 8);
             cmbDataBase.Name = "cmbDataBase";
-            cmbDataBase.Size = new Size(200, 23);
+            cmbDataBase.Size = new Size(508, 46);
             cmbDataBase.TabIndex = 21;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(324, 143);
+            label8.Location = new Point(833, 362);
+            label8.Margin = new Padding(8, 0, 8, 0);
             label8.Name = "label8";
-            label8.Size = new Size(72, 15);
+            label8.Size = new Size(178, 38);
             label8.TabIndex = 20;
             label8.Text = "DataBase：";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(612, 146);
+            label9.Location = new Point(1574, 370);
+            label9.Margin = new Padding(8, 0, 8, 0);
             label9.Name = "label9";
-            label9.Size = new Size(64, 15);
+            label9.Size = new Size(158, 38);
             label9.TabIndex = 22;
             label9.Text = "Schema：";
             // 
@@ -414,16 +439,17 @@
             cmbSchema.DropDownWidth = 220;
             cmbSchema.FlatStyle = FlatStyle.Popup;
             cmbSchema.FormattingEnabled = true;
-            cmbSchema.Location = new Point(682, 140);
+            cmbSchema.Location = new Point(1754, 355);
+            cmbSchema.Margin = new Padding(8, 8, 8, 8);
             cmbSchema.Name = "cmbSchema";
-            cmbSchema.Size = new Size(200, 23);
+            cmbSchema.Size = new Size(508, 46);
             cmbSchema.TabIndex = 23;
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(18F, 38F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1118, 607);
+            ClientSize = new Size(2875, 1538);
             Controls.Add(cmbSchema);
             Controls.Add(label9);
             Controls.Add(cmbDataBase);
@@ -453,6 +479,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(8, 8, 8, 8);
             MaximizeBox = false;
             Name = "frmMain";
             Text = "Table Schema Generator";
