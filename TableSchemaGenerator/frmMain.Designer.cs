@@ -81,7 +81,7 @@
             dataGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGV.Columns.AddRange(new DataGridViewColumn[] { chkbox, Area, Database, Schema, TableName, TableComment });
             dataGV.Location = new Point(49, 451);
-            dataGV.Margin = new Padding(8, 8, 8, 8);
+            dataGV.Margin = new Padding(8);
             dataGV.Name = "dataGV";
             dataGV.RowHeadersWidth = 51;
             dataGV.Size = new Size(2795, 1013);
@@ -170,7 +170,7 @@
             // 
             chkMergeFile.AutoSize = true;
             chkMergeFile.Location = new Point(2121, 213);
-            chkMergeFile.Margin = new Padding(8, 8, 8, 8);
+            chkMergeFile.Margin = new Padding(8);
             chkMergeFile.Name = "chkMergeFile";
             chkMergeFile.Size = new Size(295, 42);
             chkMergeFile.TabIndex = 2;
@@ -184,7 +184,7 @@
             cmbSourceType.FlatStyle = FlatStyle.Popup;
             cmbSourceType.FormattingEnabled = true;
             cmbSourceType.Location = new Point(303, 66);
-            cmbSourceType.Margin = new Padding(8, 8, 8, 8);
+            cmbSourceType.Margin = new Padding(8);
             cmbSourceType.Name = "cmbSourceType";
             cmbSourceType.Size = new Size(714, 46);
             cmbSourceType.TabIndex = 3;
@@ -197,7 +197,7 @@
             cmbDBType.FlatStyle = FlatStyle.Flat;
             cmbDBType.FormattingEnabled = true;
             cmbDBType.Location = new Point(2150, 73);
-            cmbDBType.Margin = new Padding(8, 8, 8, 8);
+            cmbDBType.Margin = new Padding(8);
             cmbDBType.Name = "cmbDBType";
             cmbDBType.Size = new Size(714, 46);
             cmbDBType.TabIndex = 4;
@@ -216,7 +216,7 @@
             // txtTblKeyword
             // 
             txtTblKeyword.Location = new Point(303, 281);
-            txtTblKeyword.Margin = new Padding(8, 8, 8, 8);
+            txtTblKeyword.Margin = new Padding(8);
             txtTblKeyword.Name = "txtTblKeyword";
             txtTblKeyword.Size = new Size(1573, 46);
             txtTblKeyword.TabIndex = 7;
@@ -224,7 +224,7 @@
             // btnQuery
             // 
             btnQuery.Location = new Point(2121, 279);
-            btnQuery.Margin = new Padding(8, 8, 8, 8);
+            btnQuery.Margin = new Padding(8);
             btnQuery.Name = "btnQuery";
             btnQuery.Size = new Size(193, 58);
             btnQuery.TabIndex = 8;
@@ -235,7 +235,7 @@
             // btnGenerateDDL
             // 
             btnGenerateDDL.Location = new Point(2330, 279);
-            btnGenerateDDL.Margin = new Padding(8, 8, 8, 8);
+            btnGenerateDDL.Margin = new Padding(8);
             btnGenerateDDL.Name = "btnGenerateDDL";
             btnGenerateDDL.Size = new Size(193, 58);
             btnGenerateDDL.TabIndex = 9;
@@ -294,7 +294,7 @@
             // txtFilePath
             // 
             txtFilePath.Location = new Point(303, 139);
-            txtFilePath.Margin = new Padding(8, 8, 8, 8);
+            txtFilePath.Margin = new Padding(8);
             txtFilePath.Name = "txtFilePath";
             txtFilePath.ReadOnly = true;
             txtFilePath.Size = new Size(1573, 46);
@@ -303,7 +303,7 @@
             // btnOpenSrcFile
             // 
             btnOpenSrcFile.Location = new Point(1898, 139);
-            btnOpenSrcFile.Margin = new Padding(8, 8, 8, 8);
+            btnOpenSrcFile.Margin = new Padding(8);
             btnOpenSrcFile.Name = "btnOpenSrcFile";
             btnOpenSrcFile.Size = new Size(75, 58);
             btnOpenSrcFile.TabIndex = 13;
@@ -324,7 +324,7 @@
             // txtDesPath
             // 
             txtDesPath.Location = new Point(303, 213);
-            txtDesPath.Margin = new Padding(8, 8, 8, 8);
+            txtDesPath.Margin = new Padding(8);
             txtDesPath.Name = "txtDesPath";
             txtDesPath.ReadOnly = true;
             txtDesPath.Size = new Size(1573, 46);
@@ -338,7 +338,7 @@
             // btnOpenDesFile
             // 
             btnOpenDesFile.Location = new Point(1898, 213);
-            btnOpenDesFile.Margin = new Padding(8, 8, 8, 8);
+            btnOpenDesFile.Margin = new Padding(8);
             btnOpenDesFile.Name = "btnOpenDesFile";
             btnOpenDesFile.Size = new Size(75, 58);
             btnOpenDesFile.TabIndex = 14;
@@ -353,7 +353,7 @@
             cmbSourceConfig.FlatStyle = FlatStyle.Flat;
             cmbSourceConfig.FormattingEnabled = true;
             cmbSourceConfig.Location = new Point(1219, 66);
-            cmbSourceConfig.Margin = new Padding(8, 8, 8, 8);
+            cmbSourceConfig.Margin = new Padding(8);
             cmbSourceConfig.Name = "cmbSourceConfig";
             cmbSourceConfig.Size = new Size(714, 46);
             cmbSourceConfig.TabIndex = 16;
@@ -372,7 +372,7 @@
             // 
             chkIsAddDbOrOwner.AutoSize = true;
             chkIsAddDbOrOwner.Location = new Point(2121, 152);
-            chkIsAddDbOrOwner.Margin = new Padding(8, 8, 8, 8);
+            chkIsAddDbOrOwner.Margin = new Padding(8);
             chkIsAddDbOrOwner.Name = "chkIsAddDbOrOwner";
             chkIsAddDbOrOwner.Size = new Size(566, 42);
             chkIsAddDbOrOwner.TabIndex = 17;
@@ -386,7 +386,7 @@
             cmbArea.FlatStyle = FlatStyle.Popup;
             cmbArea.FormattingEnabled = true;
             cmbArea.Location = new Point(303, 355);
-            cmbArea.Margin = new Padding(8, 8, 8, 8);
+            cmbArea.Margin = new Padding(8);
             cmbArea.Name = "cmbArea";
             cmbArea.Size = new Size(508, 46);
             cmbArea.TabIndex = 19;
@@ -408,7 +408,7 @@
             cmbDataBase.FlatStyle = FlatStyle.Popup;
             cmbDataBase.FormattingEnabled = true;
             cmbDataBase.Location = new Point(1029, 355);
-            cmbDataBase.Margin = new Padding(8, 8, 8, 8);
+            cmbDataBase.Margin = new Padding(8);
             cmbDataBase.Name = "cmbDataBase";
             cmbDataBase.Size = new Size(508, 46);
             cmbDataBase.TabIndex = 21;
@@ -440,7 +440,7 @@
             cmbSchema.FlatStyle = FlatStyle.Popup;
             cmbSchema.FormattingEnabled = true;
             cmbSchema.Location = new Point(1754, 355);
-            cmbSchema.Margin = new Padding(8, 8, 8, 8);
+            cmbSchema.Margin = new Padding(8);
             cmbSchema.Name = "cmbSchema";
             cmbSchema.Size = new Size(508, 46);
             cmbSchema.TabIndex = 23;
@@ -476,10 +476,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(8, 8, 8, 8);
+            Margin = new Padding(8);
             MaximizeBox = false;
             Name = "frmMain";
             Text = "Table Schema Generator";
