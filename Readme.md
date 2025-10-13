@@ -37,6 +37,12 @@ SchemaGenerator 是一個專為解決不同格式資料庫結構文件轉換痛�
 
 藉由 JSON 設定檔的彈性配置，本工具能利用欄位索引值 (IndexOf) 進行欄位映射，使程式具備處理各種固定格式數據的潛能。
 
+### 3、打破自我局限-未來功能 (Future & Feature)
+- Persona：
+  - 一般行政、文書人員
+  - 其他有用較穩定格式記錄資料，想轉換成其他報表或表格文件輸出
+  - 其他您提供需求
+
 ---
 
 ## 二、功能說明 (Feature Overview)
@@ -92,14 +98,6 @@ SchemaGenerator 具備高度的模組化架構，允許開發者輕鬆擴充新�
 
 *   **專案建立規範：** 新類別專案命名規則為：`SchemaGenerator.{TypeName}` (例如，{TypeName}可以是 MSSQL、Oracle 等)。
 *   **類別繼承與實作：** 需參考 `SchemaGenerator.BaseFactory` 專案，建立類別並繼承 **`SchemaGeneratorBase` 類別**，並實作其方法。類別名稱應規範為 `{TypeName}SchemaGenerator`。
-
----
-
-## 四、打破自我局限-未來功能 (Future & Feature)
-- Persona：
-  - 一般行政、文書人員
-  - 其他有用較穩定格式記錄資料，想轉換成其他報表或表格文件輸出
-  - 其他您提供需求
 
 ---
 
