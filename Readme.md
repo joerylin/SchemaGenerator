@@ -76,6 +76,8 @@ SchemaGenerator 的核心功能是高效且靈活地從結構文件生成 DDL (D
 *   **預設檔案路徑：** 預設的 JSON 設定檔位於 `\TableSchemaGenerator\App_Data\*.json` 路徑。Excel 範本檔則位於 `\TableSchemaGenerator\Template\ Excel檔` 路徑。
 *   **AppData.json：** 這個設定檔用於定義資料來源類型 (`SourceType`) 和資料目的類型 (`DatabaseTypes`)，並提供完整的描述名稱，讓前端下拉選單能自動對應並顯示，若無設定則顯示元件的 DDL Type 名稱。
 
+> 設定檔請參考文件說明 [ JSON 設定檔](ReadMe_vOld.md#相關範本及設定檔說明 " JSON 設定檔")
+
 ---
 
 ## 三、擴充模組功能規範 (Extension Module Specification)
