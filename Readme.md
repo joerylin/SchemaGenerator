@@ -9,6 +9,8 @@ SchemaGenerator 是一個專為解決不同格式資料庫結構文件轉換痛�
 ## 摘要介紹
 - [SchemaGenerator 大網摘要](SchemaGenerator_IntroductionSummary.md "大網摘要")
 
+- [語音介紹](https://drive.google.com/drive/folders/1QTSycXqxJT-SS54kifxGhRRGTAswm7Hh "語音介紹")
+
 ## 一、環境背景 (Context & Background)
 
 ### 1. 使用者情境介紹：告別 VAB，擁抱配置化生成！
