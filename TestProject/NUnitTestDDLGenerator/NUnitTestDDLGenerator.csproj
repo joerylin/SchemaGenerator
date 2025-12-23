@@ -27,6 +27,7 @@
     <ProjectReference Include="..\..\SchemaGenerator.MYSQL\SchemaGenerator.MYSQL.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.Oracle\SchemaGenerator.Oracle.csproj" />
     <ProjectReference Include="..\..\SchemaGenerator.POCOModel\SchemaGenerator.POCOModel.csproj" />
+    <ProjectReference Include="..\..\SchemaGenerator.PostgreSQL\SchemaGenerator.PostgreSQL.csproj" />
     <ProjectReference Include="..\..\SourceReader.TableSchema\SourceReader.TableSchema.csproj" />
   </ItemGroup>
 

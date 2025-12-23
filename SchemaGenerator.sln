@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTLibraryProject", "..\UTLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.DLL", "..\Common.DLL\Common.DLL.csproj", "{AA0F1796-EB4E-63FD-B267-3F65483ECE41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaGenerator.PostgreSQL", "SchemaGenerator.PostgreSQL\SchemaGenerator.PostgreSQL.csproj", "{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{AA0F1796-EB4E-63FD-B267-3F65483ECE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA0F1796-EB4E-63FD-B267-3F65483ECE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA0F1796-EB4E-63FD-B267-3F65483ECE41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +142,7 @@ Global
 		{3E4011FB-17A0-F45B-EB3D-BFCAFA5D956E} = {DCE00D43-4E82-4D9A-91DF-53A5F7B95153}
 		{4FB3B2AC-B83D-12A3-4A71-C69CB46EC1D7} = {2C9478AC-9BC8-4152-82BE-8E047AD6A93A}
 		{AA0F1796-EB4E-63FD-B267-3F65483ECE41} = {DCE00D43-4E82-4D9A-91DF-53A5F7B95153}
+		{D6518A1D-3ABE-E7D5-CC37-0A7F7F2FBD5B} = {0EFE8A70-C334-489B-8C48-0181C37065B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F48E7B66-EEEC-4CE1-BC85-FA876A91382C}
