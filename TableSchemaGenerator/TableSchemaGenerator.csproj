@@ -83,6 +83,9 @@
     <None Update="Extension\SchemaGenerator.POCOModel.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Extension\SchemaGenerator.PostgreSQL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Extension\SourceReader.SDM.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

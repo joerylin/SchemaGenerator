@@ -31,12 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             dataGV = new DataGridView();
-            chkbox = new DataGridViewCheckBoxColumn();
-            Area = new DataGridViewTextBoxColumn();
-            Database = new DataGridViewTextBoxColumn();
-            Schema = new DataGridViewTextBoxColumn();
-            TableName = new DataGridViewTextBoxColumn();
-            TableComment = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             chkMergeFile = new CheckBox();
@@ -68,6 +62,12 @@
             label8 = new Label();
             label9 = new Label();
             cmbSchema = new ComboBox();
+            chkbox = new DataGridViewCheckBoxColumn();
+            Area = new DataGridViewTextBoxColumn();
+            Database = new DataGridViewTextBoxColumn();
+            Schema = new DataGridViewTextBoxColumn();
+            TableName = new DataGridViewTextBoxColumn();
+            TableComment = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGV).BeginInit();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
@@ -87,64 +87,6 @@
             dataGV.Size = new Size(2795, 1013);
             dataGV.TabIndex = 6;
             dataGV.CellPainting += dataGV_CellPainting;
-            // 
-            // chkbox
-            // 
-            chkbox.DataPropertyName = "IsChecked";
-            chkbox.Frozen = true;
-            chkbox.HeaderText = "";
-            chkbox.MinimumWidth = 6;
-            chkbox.Name = "chkbox";
-            chkbox.Width = 35;
-            // 
-            // Area
-            // 
-            Area.DataPropertyName = "Area";
-            Area.Frozen = true;
-            Area.HeaderText = "Area(類別)";
-            Area.MinimumWidth = 6;
-            Area.Name = "Area";
-            Area.Width = 125;
-            // 
-            // Database
-            // 
-            Database.DataPropertyName = "DataBase";
-            Database.Frozen = true;
-            Database.HeaderText = "DataBase";
-            Database.MinimumWidth = 6;
-            Database.Name = "Database";
-            Database.ReadOnly = true;
-            Database.Width = 125;
-            // 
-            // Schema
-            // 
-            Schema.DataPropertyName = "Schema";
-            Schema.Frozen = true;
-            Schema.HeaderText = "Schema";
-            Schema.MinimumWidth = 6;
-            Schema.Name = "Schema";
-            Schema.ReadOnly = true;
-            Schema.Width = 125;
-            // 
-            // TableName
-            // 
-            TableName.DataPropertyName = "TableName";
-            TableName.Frozen = true;
-            TableName.HeaderText = "Table Name";
-            TableName.MinimumWidth = 6;
-            TableName.Name = "TableName";
-            TableName.ReadOnly = true;
-            TableName.Width = 200;
-            // 
-            // TableComment
-            // 
-            TableComment.DataPropertyName = "TableComment";
-            TableComment.Frozen = true;
-            TableComment.HeaderText = "Table Comment";
-            TableComment.MinimumWidth = 6;
-            TableComment.Name = "TableComment";
-            TableComment.ReadOnly = true;
-            TableComment.Width = 260;
             // 
             // label1
             // 
@@ -445,6 +387,64 @@
             cmbSchema.Size = new Size(508, 46);
             cmbSchema.TabIndex = 23;
             // 
+            // chkbox
+            // 
+            chkbox.DataPropertyName = "IsChecked";
+            chkbox.Frozen = true;
+            chkbox.HeaderText = "";
+            chkbox.MinimumWidth = 6;
+            chkbox.Name = "chkbox";
+            chkbox.Width = 130;
+            // 
+            // Area
+            // 
+            Area.DataPropertyName = "Area";
+            Area.Frozen = true;
+            Area.HeaderText = "Area(類別)";
+            Area.MinimumWidth = 6;
+            Area.Name = "Area";
+            Area.Width = 250;
+            // 
+            // Database
+            // 
+            Database.DataPropertyName = "DataBase";
+            Database.Frozen = true;
+            Database.HeaderText = "DataBase";
+            Database.MinimumWidth = 6;
+            Database.Name = "Database";
+            Database.ReadOnly = true;
+            Database.Width = 250;
+            // 
+            // Schema
+            // 
+            Schema.DataPropertyName = "Schema";
+            Schema.Frozen = true;
+            Schema.HeaderText = "Schema";
+            Schema.MinimumWidth = 6;
+            Schema.Name = "Schema";
+            Schema.ReadOnly = true;
+            Schema.Width = 250;
+            // 
+            // TableName
+            // 
+            TableName.DataPropertyName = "TableName";
+            TableName.Frozen = true;
+            TableName.HeaderText = "Table Name";
+            TableName.MinimumWidth = 6;
+            TableName.Name = "TableName";
+            TableName.ReadOnly = true;
+            TableName.Width = 660;
+            // 
+            // TableComment
+            // 
+            TableComment.DataPropertyName = "TableComment";
+            TableComment.Frozen = true;
+            TableComment.HeaderText = "Table Comment";
+            TableComment.MinimumWidth = 6;
+            TableComment.Name = "TableComment";
+            TableComment.ReadOnly = true;
+            TableComment.Width = 800;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(18F, 38F);
@@ -516,12 +516,6 @@
         private Label label5;
         private Button btnOpenDesFile;
         private SaveFileDialog saveDesFileDialog;
-        private DataGridViewCheckBoxColumn chkbox;
-        private DataGridViewTextBoxColumn Area;
-        private DataGridViewTextBoxColumn Database;
-        private DataGridViewTextBoxColumn Schema;
-        private DataGridViewTextBoxColumn TableName;
-        private DataGridViewTextBoxColumn TableComment;
         private CheckBox chkIsAddDbOrOwner;
         private ComboBox cmbSourceConfig;
         private Label label6;
@@ -531,5 +525,11 @@
         private ComboBox cmbArea;
         private Label label7;
         private ComboBox cmbSchema;
+        private DataGridViewCheckBoxColumn chkbox;
+        private DataGridViewTextBoxColumn Area;
+        private DataGridViewTextBoxColumn Database;
+        private DataGridViewTextBoxColumn Schema;
+        private DataGridViewTextBoxColumn TableName;
+        private DataGridViewTextBoxColumn TableComment;
     }
 }
