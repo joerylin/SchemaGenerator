@@ -100,10 +100,8 @@ namespace SchemaGenerator.PostgreSQL
             StringBuilder sb = new StringBuilder();
             foreach (var col in schemas)
             {
-                if (!string.IsNullOrEmpty(col.ColumnDescription))
-                {
-                    sb.AppendLine($"\r\nCOMMENT ON COLUMN {col.TableName}.{col.ColumnName} IS '{col.ColumnDescription}';");
-                }
+                if (!string.IsNullOrEmpty(col.ColumnDescription))           
+                    sb.Append($"\r\nCOMMENT ON COLUMN {col.TableName}.{col.ColumnName} IS '{col.ColumnDescription}';");            
             }
             if (sb.Length > 0)
                 sb.Insert(0, "\r\n");
